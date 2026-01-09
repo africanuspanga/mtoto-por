@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { MapPin, Phone, Mail, Clock, Globe, MessageCircle } from "lucide-react"
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa"
 
 const contactInfo = [
   {
@@ -29,7 +30,7 @@ const contactInfo = [
     icon: MessageCircle,
     title: "WhatsApp",
     details: ["+255 777 411 991"],
-    links: ["https://wa.me/255777411991"],
+    links: ["https://api.whatsapp.com/send/?phone=255777411991&text&type=phone_number&app_absent=0"],
   },
   {
     icon: Mail,
@@ -47,6 +48,16 @@ const contactInfo = [
     icon: Clock,
     title: "Opening Hours",
     details: ["Mon - Fri: 8:00 - 17:00", "Sat: 8:00 - 14:00", "Sun: Closed"],
+  },
+]
+
+const socialLinks = [
+  { name: "Facebook", icon: FaFacebookF, href: "https://www.facebook.com/ZanzibarExclusiveTours" },
+  { name: "Instagram", icon: FaInstagram, href: "https://www.instagram.com/zanzibarexclusivetours" },
+  {
+    name: "WhatsApp",
+    icon: FaWhatsapp,
+    href: "https://api.whatsapp.com/send/?phone=255777411991&text&type=phone_number&app_absent=0",
   },
 ]
 
@@ -77,7 +88,7 @@ export default function ContactUsPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-20 min-h-[50vh] flex items-center">
+      <section className="relative pt-20 md:pt-32 min-h-[50vh] flex items-center">
         <div className="absolute inset-0">
           <Image
             src="/images/contact-page.webp"
@@ -258,6 +269,30 @@ export default function ContactUsPage() {
                   </motion.div>
                 ))}
               </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="mt-8 bg-card p-6 rounded-xl border border-border/50"
+              >
+                <h3 className="font-display font-bold text-foreground mb-4">Follow Us on Social Media</h3>
+                <div className="flex gap-4">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 rounded-full bg-primary/10 hover:bg-primary hover:text-white text-primary transition-colors"
+                      aria-label={social.name}
+                    >
+                      <social.icon className="h-5 w-5" />
+                    </a>
+                  ))}
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>

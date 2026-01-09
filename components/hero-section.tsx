@@ -8,7 +8,7 @@ import Link from "next/link"
 const heroSlides = [
   {
     image: "/images/hero-1.jpg",
-    title: "Discover Zanzibar",
+    title: "Experience Zanzibar",
     description: "Experience paradise with unforgettable tours and adventures",
   },
   {

@@ -3,7 +3,8 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Instagram, Twitter, Youtube, MapPin, Phone, Mail, Clock } from "lucide-react"
+import { MapPin, Phone, Mail, Clock } from "lucide-react"
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaTwitter, FaYoutube } from "react-icons/fa"
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -12,6 +13,8 @@ const quickLinks = [
   { name: "Tanzania Safaris", href: "/tanzania-safaris" },
   { name: "Packages", href: "/packages" },
   { name: "Contact Us", href: "/contact-us" },
+  { name: "FAQs", href: "/faqs" },
+  { name: "Zanzibar Weather", href: "/zanzibar-weather" },
 ]
 
 const tourLinks = [
@@ -24,10 +27,15 @@ const tourLinks = [
 ]
 
 const socialLinks = [
-  { name: "Facebook", icon: Facebook, href: "#" },
-  { name: "Instagram", icon: Instagram, href: "#" },
-  { name: "Twitter", icon: Twitter, href: "#" },
-  { name: "Youtube", icon: Youtube, href: "#" },
+  { name: "Facebook", icon: FaFacebookF, href: "https://www.facebook.com/ZanzibarExclusiveTours" },
+  { name: "Instagram", icon: FaInstagram, href: "https://www.instagram.com/zanzibarexclusivetours" },
+  {
+    name: "WhatsApp",
+    icon: FaWhatsapp,
+    href: "https://api.whatsapp.com/send/?phone=255777411991&text&type=phone_number&app_absent=0",
+  },
+  { name: "Twitter", icon: FaTwitter, href: "#" },
+  { name: "Youtube", icon: FaYoutube, href: "#" },
 ]
 
 export function Footer() {
@@ -54,15 +62,17 @@ export function Footer() {
               Your trusted partner in unforgettable travel experiences. Serving wonderful vacations for over 20 years.
             </p>
             {/* Social Links */}
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-                  className="p-2 rounded-full bg-white/10 hover:bg-primary hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-full bg-white/10 hover:bg-primary hover:text-white transition-colors"
                   aria-label={social.name}
                 >
-                  <social.icon className="h-5 w-5" />
+                  <social.icon className="h-4 w-4" />
                 </a>
               ))}
             </div>

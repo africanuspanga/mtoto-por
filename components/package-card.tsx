@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import { Calendar, Moon, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { PackageData } from "@/lib/packages-data"
 
@@ -38,17 +38,13 @@ export function PackageCard({ pkg, index }: PackageCardProps) {
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-        {/* Duration Badge */}
-        <div className="absolute top-4 left-4 flex gap-2">
-          <span className="px-3 py-1.5 bg-primary text-primary-foreground text-sm font-semibold rounded-full flex items-center gap-1.5">
-            <Calendar className="h-3.5 w-3.5" />
-            {pkg.duration}
-          </span>
-          <span className="px-3 py-1.5 bg-secondary text-secondary-foreground text-sm font-semibold rounded-full flex items-center gap-1.5">
-            <Moon className="h-3.5 w-3.5" />
-            {pkg.nights}
-          </span>
-        </div>
+        {pkg.price && (
+          <div className="absolute top-4 right-4">
+            <span className="px-4 py-2 bg-primary text-primary-foreground text-sm font-bold rounded-full shadow-lg">
+              {pkg.price}
+            </span>
+          </div>
+        )}
 
         {/* Title on Image */}
         <div className="absolute bottom-4 left-4 right-4">

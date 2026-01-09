@@ -32,6 +32,14 @@
   --accent: oklch(0.25 0.04 25);
   --accent-foreground: oklch(0.99 0 0);
 
+  /* Added dark color for CTA sections */
+  --dark: oklch(0.15 0.01 30);
+  --dark-foreground: oklch(0.99 0 0);
+
+  /* Added ocean color */
+  --ocean: oklch(0.62 0.15 230);
+  --ocean-foreground: oklch(0.99 0 0);
+
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.99 0 0);
 
@@ -76,6 +84,11 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  /* Added dark and ocean color mappings */
+  --color-dark: var(--dark);
+  --color-dark-foreground: var(--dark-foreground);
+  --color-ocean: var(--ocean);
+  --color-ocean-foreground: var(--ocean-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
