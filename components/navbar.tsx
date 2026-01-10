@@ -73,11 +73,11 @@ export function Navbar() {
             <Link href="/" onClick={handleNavClick} className="flex-shrink-0">
               <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
                 <Image
-                  src="/images/logo.webp"
+                  src="/images/logo-new.png"
                   alt="Zanzibar Exclusive Tours & Safaris"
-                  width={180}
-                  height={80}
-                  className="h-16 md:h-18 w-auto"
+                  width={200}
+                  height={90}
+                  className="h-16 md:h-20 w-auto"
                   priority
                 />
               </motion.div>

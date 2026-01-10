@@ -190,9 +190,14 @@ export function Footer() {
       <div className="bg-black/80 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-white/60 text-sm font-body text-center md:text-left">
+            <a
+              href="http://driftmark.co.tz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 text-sm font-body text-center md:text-left hover:text-white/60 no-underline"
+            >
               © {new Date().getFullYear()} Zanzibar Exclusive Tours & Safaris. All rights reserved.
-            </p>
+            </a>
             <div className="flex items-center gap-6">
               <Link href="/privacy" className="text-white/60 text-sm hover:text-primary transition-colors font-body">
                 Privacy Policy

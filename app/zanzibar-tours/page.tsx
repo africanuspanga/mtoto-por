@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Compass, Anchor, Sun, Palmtree } from "lucide-react"
+import { Compass, Anchor, Sun, Palmtree, Clock, Timer } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -19,6 +19,7 @@ const features = [
 
 export default function ZanzibarToursPage() {
   const fullDayTours = zanzibarTours.filter((tour) => tour.category === "full-day")
+  const halfDayTours = zanzibarTours.filter((tour) => tour.category === "half-day")
 
   return (
     <main className="min-h-screen bg-background">
@@ -29,7 +30,7 @@ export default function ZanzibarToursPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/placeholder.svg?height=800&width=1200')",
+            backgroundImage: "url('/images/tours/nakupenda-sandbank.webp')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
@@ -79,7 +80,10 @@ export default function ZanzibarToursPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Island Experiences</span>
+            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+              <Clock className="w-5 h-5 text-primary" />
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">Full Day Experiences</span>
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4 font-serif">Full Day Tours</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Immerse yourself in the beauty and culture of Zanzibar with our comprehensive full-day tours, each
@@ -96,6 +100,35 @@ export default function ZanzibarToursPage() {
         </div>
       </section>
 
+      <section className="py-16 md:py-24 bg-gradient-to-b from-secondary/5 to-secondary/15">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <div className="inline-flex items-center gap-2 bg-secondary/20 px-4 py-2 rounded-full mb-4">
+              <Timer className="w-5 h-5 text-secondary" />
+              <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Half Day Adventures</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4 font-serif">Half Day Tours</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Short on time? Our half-day tours offer the perfect way to experience Zanzibar's highlights. Perfect for
+              combining multiple experiences in a single day.
+            </p>
+          </motion.div>
+
+          {/* Half Day Tours Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {halfDayTours.map((tour, index) => (
+              <TourCard key={tour.id} tour={tour} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
       <section className="py-16 md:py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
