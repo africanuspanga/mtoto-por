@@ -8,50 +8,12 @@ import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { Clock, DollarSign, Users, Timer, Car, MapPin, Phone, CheckCircle, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
-const benefits = [
-  {
-    icon: DollarSign,
-    title: "Without Additional Costs",
-    description: "We do not charge any additional fees. Free waiting, free cancellation.",
-  },
-  {
-    icon: Clock,
-    title: "On Time Taxi",
-    description:
-      "Our cars always arrive on time. The driver arrives 15 minutes earlier and will take you on a journey.",
-  },
-  {
-    icon: Users,
-    title: "Friendly Drivers",
-    description: "We are friendly and knowledgeable drivers to achieve your satisfaction.",
-  },
-  {
-    icon: Timer,
-    title: "Free Waiting Charges",
-    description: "You will not pay any waiting fee at the airport, we understand the visa process at the airport.",
-  },
-]
+import { useLanguage } from "@/lib/language-context"
 
 const vehicles = [
-  {
-    name: "Toyota Alphard",
-    capacity: "1 – 6 travelers",
-    image: "/images/transfers/toyota-alphard.webp",
-    description: "Luxury minivan perfect for couples, families, and small groups seeking comfort.",
-  },
-  {
-    name: "Toyota Hiace",
-    capacity: "8 – 16 travelers",
-    image: "/images/transfers/toyota-hiace.webp",
-    description: "Spacious van ideal for medium-sized groups and tour parties.",
-  },
-  {
-    name: "Coaster Bus",
-    capacity: "15 – 28 travelers",
-    image: "/images/transfers/toyota-coaster.webp",
-    description: "Full-size bus for large groups, events, and corporate transfers.",
-  },
+  { name: "Toyota Alphard", capacityKey: "1 – 6", image: "/images/transfers/toyota-alphard.webp" },
+  { name: "Toyota Hiace", capacityKey: "8 – 16", image: "/images/transfers/toyota-hiace.webp" },
+  { name: "Coaster Bus", capacityKey: "15 – 28", image: "/images/transfers/toyota-coaster.webp" },
 ]
 
 const popularRoutes = [
@@ -67,6 +29,15 @@ const popularRoutes = [
 ]
 
 export default function TransfersPage() {
+  const { t } = useLanguage()
+
+  const benefits = [
+    { icon: DollarSign, titleKey: "transfersPage.benefit1.title", descKey: "transfersPage.benefit1.desc" },
+    { icon: Clock, titleKey: "transfersPage.benefit2.title", descKey: "transfersPage.benefit2.desc" },
+    { icon: Users, titleKey: "transfersPage.benefit3.title", descKey: "transfersPage.benefit3.desc" },
+    { icon: Timer, titleKey: "transfersPage.benefit4.title", descKey: "transfersPage.benefit4.desc" },
+  ]
+
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
@@ -87,22 +58,21 @@ export default function TransfersPage() {
           >
             <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full mb-6">
               <Car className="w-5 h-5" />
-              <span className="font-medium">24/7 Transfer Services</span>
+              <span className="font-medium">{t("transfers.badge")}</span>
             </div>
 
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">
-              Airport & Hotel <span className="text-primary">Transfers</span>
+              {t("transfersPage.title")}
             </h1>
 
             <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto text-pretty">
-              Reliable, comfortable, and affordable taxi services across Zanzibar. Book your transfer with us and travel
-              with peace of mind.
+              {t("transfersPage.subtitle")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
                 <Link href="/contact-us">
-                  Book Your Transfer
+                  {t("common.bookNow")}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
@@ -118,7 +88,7 @@ export default function TransfersPage() {
                   rel="noopener noreferrer"
                 >
                   <Phone className="mr-2 w-5 h-5" />
-                  WhatsApp Us
+                  {t("common.whatsapp")}
                 </a>
               </Button>
             </div>
@@ -136,17 +106,14 @@ export default function TransfersPage() {
             className="text-center mb-12"
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Book a Taxi With <span className="text-primary">Us?</span>
+              {t("transfersPage.whyBook")}
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Experience hassle-free transportation with our professional and reliable service
-            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <motion.div
-                key={benefit.title}
+                key={benefit.titleKey}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -156,8 +123,8 @@ export default function TransfersPage() {
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                   <benefit.icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-2">{benefit.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{benefit.description}</p>
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-2">{t(benefit.titleKey)}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{t(benefit.descKey)}</p>
               </motion.div>
             ))}
           </div>
@@ -174,12 +141,9 @@ export default function TransfersPage() {
             className="text-center mb-12"
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Types of <span className="text-primary">Transport</span>
+              {t("transfersPage.vehiclesTitle")}
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              We use the best cars to satisfy our customers. Our vehicles suit all types of travelers - single
-              travelers, couples, families, and groups.
-            </p>
+            <p className="text-muted-foreground max-w-2xl mx-auto">{t("transfersPage.vehiclesDesc")}</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -200,15 +164,16 @@ export default function TransfersPage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
-                    {vehicle.capacity}
+                    {vehicle.capacityKey} {t("transfers.passengers")}
                   </div>
                 </div>
                 <div className="p-6">
                   <h3 className="font-serif text-xl font-semibold text-foreground mb-2">{vehicle.name}</h3>
-                  <p className="text-muted-foreground text-sm mb-4">{vehicle.description}</p>
                   <div className="flex items-center text-primary">
                     <Users className="w-4 h-4 mr-2" />
-                    <span className="text-sm font-medium">{vehicle.capacity}</span>
+                    <span className="text-sm font-medium">
+                      {vehicle.capacityKey} {t("transfers.passengers")}
+                    </span>
                   </div>
                 </div>
               </motion.div>
@@ -224,27 +189,23 @@ export default function TransfersPage() {
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full mb-6">
                 <Clock className="w-5 h-5" />
-                <span className="font-medium">Available 24/7</span>
+                <span className="font-medium">24/7</span>
               </div>
 
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-                We Are a <span className="text-primary">24 Hour</span> Taxi Service in Zanzibar
+                {t("transfersPage.service24Title")}
               </h2>
 
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                If you are looking for a taxi in Zanzibar that will offer services whenever you need them, then you have
-                come to the right place!
-              </p>
-
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                We provide taxi services without time limits. The driver will come to pick you up at any time you have
-                mentioned to us in advance and will take you to your destination. We really care about our customers'
-                time. So you can contact us and book our services anywhere in Zanzibar - from airport, hotels, or
-                anywhere.
-              </p>
+              <p className="text-muted-foreground mb-6 leading-relaxed">{t("transfersPage.service24Desc1")}</p>
+              <p className="text-muted-foreground mb-8 leading-relaxed">{t("transfersPage.service24Desc2")}</p>
 
               <div className="space-y-3">
-                {["Airport pickups & drop-offs", "Hotel transfers", "Island tours", "Custom routes"].map((item) => (
+                {[
+                  t("transfersPage.feature1"),
+                  t("transfersPage.feature2"),
+                  t("transfersPage.feature3"),
+                  t("transfersPage.feature4"),
+                ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
                     <span className="text-foreground">{item}</span>
@@ -296,11 +257,9 @@ export default function TransfersPage() {
             className="text-center mb-12"
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Most Popular <span className="text-primary">Taxi Routes</span>
+              {t("transfersPage.popularRoutes")}
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Book your transfer on any of these popular routes or contact us for custom destinations
-            </p>
+            <p className="text-muted-foreground max-w-2xl mx-auto">{t("transfersPage.popularRoutesDesc")}</p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -336,16 +295,11 @@ export default function TransfersPage() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
-              Ready to Book Your <span className="text-primary">Transfer?</span>
-            </h2>
-            <p className="text-white/80 mb-8 text-lg">
-              Contact us today to arrange your airport pickup, hotel transfer, or custom route. We're available 24/7 to
-              serve you.
-            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">{t("transfersPage.ctaTitle")}</h2>
+            <p className="text-white/80 mb-8 text-lg">{t("transfersPage.ctaDesc")}</p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
               <Link href="/contact-us">
-                Contact Us Now
+                {t("transfersPage.contactNow")}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>

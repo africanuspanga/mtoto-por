@@ -12,14 +12,14 @@ import { useLanguage } from "@/lib/language-context"
 import { TopBar } from "@/components/top-bar"
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about-us" },
-  { name: "About Zanzibar", href: "/about-zanzibar" },
-  { name: "Zanzibar Tours", href: "/zanzibar-tours" },
-  { name: "Tanzania Safaris", href: "/tanzania-safaris" },
-  { name: "Packages", href: "/packages" },
-  { name: "Transfers", href: "/transfers" },
-  { name: "Contact Us", href: "/contact-us" },
+  { key: "nav.home", href: "/" },
+  { key: "nav.about-us", href: "/about-us" },
+  { key: "nav.about-zanzibar", href: "/about-zanzibar" },
+  { key: "nav.zanzibar-tours", href: "/zanzibar-tours" },
+  { key: "nav.tanzania-safaris", href: "/tanzania-safaris" },
+  { key: "nav.packages", href: "/packages" },
+  { key: "nav.transfers", href: "/transfers" },
+  { key: "nav.contact-us", href: "/contact-us" },
 ]
 
 const languages = [
@@ -34,7 +34,7 @@ const languages = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const { currentLang, setLanguage, t } = useLanguage()
+  const { language, setLanguage, t } = useLanguage()
   const pathname = usePathname()
 
   useEffect(() => {
@@ -50,12 +50,7 @@ export function Navbar() {
     setIsMobileMenuOpen(false)
   }
 
-  const currentLangData = languages.find((l) => l.code === currentLang) || languages[0]
-
-  const getNavName = (item: { name: string; href: string }) => {
-    const key = `nav.${item.href.replace("/", "") || "home"}` as keyof typeof t
-    return t[key] || item.name
-  }
+  const currentLangData = languages.find((l) => l.code === language) || languages[0]
 
   return (
     <>
@@ -93,7 +88,7 @@ export function Navbar() {
             <div className="hidden xl:flex items-center gap-1">
               {navItems.map((item, index) => (
                 <motion.div
-                  key={item.name}
+                  key={item.key}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
@@ -105,7 +100,7 @@ export function Navbar() {
                       isScrolled ? "text-foreground" : "text-white"
                     } ${pathname === item.href ? "text-primary" : ""}`}
                   >
-                    {getNavName(item)}
+                    {t(item.key)}
                   </Link>
                 </motion.div>
               ))}
@@ -131,7 +126,7 @@ export function Navbar() {
                     <DropdownMenuItem key={lang.code} onClick={() => setLanguage(lang.code)} className="cursor-pointer">
                       <span className="mr-2">{lang.flag}</span>
                       {lang.name}
-                      {currentLang === lang.code && <span className="ml-auto text-primary">✓</span>}
+                      {language === lang.code && <span className="ml-auto text-primary">✓</span>}
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -141,13 +136,13 @@ export function Navbar() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6">
                   <Link href="/contact-us" onClick={handleNavClick}>
-                    {t["nav.book"] || "Book Tour"}
+                    {t("nav.book")}
                   </Link>
                 </Button>
               </motion.div>
             </div>
 
-            {/* Mobile Menu Button - changed lg to xl */}
+            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`xl:hidden p-2 rounded-lg ${isScrolled ? "text-foreground" : "text-white"}`}
@@ -170,7 +165,7 @@ export function Navbar() {
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item, index) => (
                 <motion.div
-                  key={item.name}
+                  key={item.key}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
@@ -182,7 +177,7 @@ export function Navbar() {
                       pathname === item.href ? "text-primary" : "text-foreground"
                     }`}
                   >
-                    {getNavName(item)}
+                    {t(item.key)}
                   </Link>
                 </motion.div>
               ))}
@@ -196,7 +191,7 @@ export function Navbar() {
                       key={lang.code}
                       onClick={() => setLanguage(lang.code)}
                       className={`px-3 py-2 rounded-lg text-sm flex items-center gap-2 transition-colors ${
-                        currentLang === lang.code
+                        language === lang.code
                           ? "bg-primary text-primary-foreground"
                           : "bg-muted text-muted-foreground hover:bg-muted/80"
                       }`}
@@ -214,7 +209,7 @@ export function Navbar() {
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6 text-lg"
               >
                 <Link href="/contact-us" onClick={handleNavClick}>
-                  {t["nav.book"] || "Book Tour"}
+                  {t("nav.book")}
                 </Link>
               </Button>
             </div>
