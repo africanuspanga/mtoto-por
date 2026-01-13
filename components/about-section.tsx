@@ -3,15 +3,13 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { CheckCircle2 } from "lucide-react"
-
-const highlights = [
-  "Over 20 years of experience",
-  "Personalized tours & transfers",
-  "Expert local guides",
-  "Large group capabilities",
-]
+import { useLanguage } from "@/lib/language-context"
 
 export function AboutSection() {
+  const { t } = useLanguage()
+
+  const highlights = [t("about.highlight1"), t("about.highlight2"), t("about.highlight3"), t("about.highlight4")]
+
   return (
     <section id="about" className="py-20 md:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,19 +52,12 @@ export function AboutSection() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">About Us</span>
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">{t("about.badge")}</span>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
-              Your Trusted Partner in Unforgettable Adventures
+              {t("about.title")}
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6 font-body">
-              Welcome to Zanzibar Exclusive Tours and Safaris, your trusted partner in unforgettable travel experiences!
-              With over 20 years in the tourism industry, we've been providing exceptional tours, transfers, and
-              personalized excursions to travelers from all over the world.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8 font-body">
-              Whether you're looking to relax on Zanzibar's pristine beaches or explore its rich culture, we ensure
-              every moment is nothing short of extraordinary.
-            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6 font-body">{t("about.description1")}</p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 font-body">{t("about.description2")}</p>
 
             {/* Highlights */}
             <div className="grid sm:grid-cols-2 gap-4">

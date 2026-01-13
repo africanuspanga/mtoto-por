@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Quote, Star } from "lucide-react"
+import { useLanguage } from "@/lib/language-context"
 
 const testimonials = [
   {
@@ -35,6 +36,8 @@ const testimonials = [
 ]
 
 export function TestimonialsSection() {
+  const { t } = useLanguage()
+
   return (
     <section id="testimonials" className="py-20 md:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,13 +49,11 @@ export function TestimonialsSection() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Testimonials</span>
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">{t("testimonials.badge")}</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
-            What Our Guests Say
+            {t("testimonials.title")}
           </h2>
-          <p className="text-muted-foreground text-lg font-body">
-            Real experiences from travelers who trusted us with their Zanzibar adventures.
-          </p>
+          <p className="text-muted-foreground text-lg font-body">{t("testimonials.subtitle")}</p>
         </motion.div>
 
         {/* Testimonials Grid */}
@@ -70,24 +71,20 @@ export function TestimonialsSection() {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="h-full bg-card p-8 rounded-2xl shadow-lg border border-border/50 relative"
               >
-                {/* Quote Icon */}
                 <div className="absolute -top-4 left-8">
                   <div className="bg-primary p-3 rounded-full">
                     <Quote className="h-5 w-5 text-primary-foreground" />
                   </div>
                 </div>
 
-                {/* Rating */}
                 <div className="flex gap-1 mb-4 pt-2">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star key={i} className="h-5 w-5 fill-primary text-primary" />
                   ))}
                 </div>
 
-                {/* Text */}
                 <p className="text-muted-foreground font-body leading-relaxed mb-6 italic">"{testimonial.text}"</p>
 
-                {/* Name with Flag */}
                 <div className="border-t border-border pt-4">
                   <div className="flex items-center gap-2">
                     <span className="text-2xl">{testimonial.flag}</span>

@@ -6,11 +6,13 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { safariPackages } from "@/lib/safaris-data"
+import { useLanguage } from "@/lib/language-context"
 
-// Get 3 safaris with prices
 const featuredSafaris = safariPackages.filter((s) => s.pricing && s.pricing.length > 0).slice(0, 3)
 
 export function SafarisSection() {
+  const { t } = useLanguage()
+
   return (
     <section className="py-20 md:py-28 bg-dark text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,14 +26,12 @@ export function SafarisSection() {
         >
           <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full mb-4">
             <Compass className="h-4 w-4" />
-            <span className="text-sm font-semibold uppercase tracking-wider">Tanzania Safaris</span>
+            <span className="text-sm font-semibold uppercase tracking-wider">{t("safaris.badge")}</span>
           </div>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4 text-balance">
-            Witness Africa's Greatest Wildlife
+            {t("safaris.title")}
           </h2>
-          <p className="text-white/70 text-lg">
-            From the legendary Serengeti to Ngorongoro Crater, experience Tanzania's world-famous national parks.
-          </p>
+          <p className="text-white/70 text-lg">{t("safaris.description")}</p>
         </motion.div>
 
         {/* Safaris Grid */}
@@ -54,7 +54,6 @@ export function SafarisSection() {
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                    {/* Price badge */}
                     <div className="absolute top-4 right-4">
                       <span className="bg-primary text-white text-sm font-bold px-3 py-1 rounded-full">
                         {safari.pricing[0]?.prices[0]?.price || "Contact Us"}
@@ -100,7 +99,7 @@ export function SafarisSection() {
             className="border-white text-white hover:bg-white hover:text-dark bg-transparent"
           >
             <Link href="/tanzania-safaris" className="flex items-center gap-2">
-              View More Tanzania Safaris
+              {t("safaris.viewAll")}
               <ArrowRight className="h-5 w-5" />
             </Link>
           </Button>

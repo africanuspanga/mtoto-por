@@ -6,10 +6,13 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { zanzibarTours } from "@/lib/tours-data"
+import { useLanguage } from "@/lib/language-context"
 
 const fullDayTours = zanzibarTours.filter((tour) => tour.category === "full-day").slice(0, 3)
 
 export function FullDayToursSection() {
+  const { t } = useLanguage()
+
   return (
     <section className="py-20 md:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,14 +26,12 @@ export function FullDayToursSection() {
         >
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
             <Clock className="h-4 w-4" />
-            <span className="text-sm font-semibold uppercase tracking-wider">Full Day Tours</span>
+            <span className="text-sm font-semibold uppercase tracking-wider">{t("fullDayTours.badge")}</span>
           </div>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-            Explore Zanzibar in a Day
+            {t("fullDayTours.title")}
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Immerse yourself in unforgettable adventures with our carefully curated full-day experiences.
-          </p>
+          <p className="text-muted-foreground text-lg">{t("fullDayTours.description")}</p>
         </motion.div>
 
         {/* Tours Grid */}
@@ -88,7 +89,7 @@ export function FullDayToursSection() {
         >
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
             <Link href="/zanzibar-tours" className="flex items-center gap-2">
-              View Full Day Tours
+              {t("fullDayTours.viewAll")}
               <ArrowRight className="h-5 w-5" />
             </Link>
           </Button>

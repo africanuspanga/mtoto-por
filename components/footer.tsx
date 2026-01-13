@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaTwitter, FaYoutube } from "react-icons/fa"
+import { useLanguage } from "@/lib/language-context"
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -39,12 +40,14 @@ const socialLinks = [
 ]
 
 export function Footer() {
+  const { t } = useLanguage()
+
   return (
     <footer className="bg-black text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand Column - Replaced logo with text */}
+          {/* Brand Column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -58,9 +61,7 @@ export function Footer() {
                 <span className="text-primary">TOURS</span>
               </h2>
             </Link>
-            <p className="text-white/70 font-body mb-6 leading-relaxed">
-              Your trusted partner in unforgettable travel experiences. Serving wonderful vacations for over 20 years.
-            </p>
+            <p className="text-white/70 font-body mb-6 leading-relaxed">{t["footer.brand"]}</p>
             {/* Social Links */}
             <div className="flex gap-3">
               {socialLinks.map((social) => (
@@ -85,7 +86,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="font-display text-lg font-bold mb-6 text-white">Quick Links</h3>
+            <h3 className="font-display text-lg font-bold mb-6 text-white">{t["footer.quickLinks"]}</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -104,7 +105,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="font-display text-lg font-bold mb-6 text-white">Popular Tours</h3>
+            <h3 className="font-display text-lg font-bold mb-6 text-white">{t["footer.popularTours"]}</h3>
             <ul className="space-y-3">
               {tourLinks.map((link) => (
                 <li key={link.name}>
@@ -123,7 +124,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h3 className="font-display text-lg font-bold mb-6 text-white">Contact Us</h3>
+            <h3 className="font-display text-lg font-bold mb-6 text-white">{t["footer.contactUs"]}</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -174,7 +175,7 @@ export function Footer() {
           className="mt-12 pt-8 border-t border-white/10"
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-white/70 text-sm font-body">We Accept:</p>
+            <p className="text-white/70 text-sm font-body">{t["footer.weAccept"]}</p>
             <Image
               src="/images/payment-methods.webp"
               alt="Payment Methods - Visa, MasterCard, American Express"
@@ -196,14 +197,14 @@ export function Footer() {
               rel="noopener noreferrer"
               className="text-white/60 text-sm font-body text-center md:text-left hover:text-white/60 no-underline"
             >
-              © {new Date().getFullYear()} Zanzibar Exclusive Tours & Safaris. All rights reserved.
+              © {new Date().getFullYear()} Zanzibar Exclusive Tours & Safaris. {t["footer.rights"]}
             </a>
             <div className="flex items-center gap-6">
               <Link href="/privacy" className="text-white/60 text-sm hover:text-primary transition-colors font-body">
-                Privacy Policy
+                {t["footer.privacyPolicy"]}
               </Link>
               <Link href="/terms" className="text-white/60 text-sm hover:text-primary transition-colors font-body">
-                Terms of Service
+                {t["footer.termsOfService"]}
               </Link>
             </div>
           </div>

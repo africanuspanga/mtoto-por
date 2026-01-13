@@ -6,11 +6,13 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { packagesData } from "@/lib/packages-data"
+import { useLanguage } from "@/lib/language-context"
 
-// Get 3 packages with prices
 const featuredPackages = packagesData.filter((p) => p.price).slice(0, 3)
 
 export function PackagesSection() {
+  const { t } = useLanguage()
+
   return (
     <section className="py-20 md:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,14 +26,12 @@ export function PackagesSection() {
         >
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
             <Package className="h-4 w-4" />
-            <span className="text-sm font-semibold uppercase tracking-wider">Holiday Packages</span>
+            <span className="text-sm font-semibold uppercase tracking-wider">{t("packages.badge")}</span>
           </div>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-            All-Inclusive Zanzibar Getaways
+            {t("packages.title")}
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Hassle-free vacation packages combining the best tours, accommodations, and experiences.
-          </p>
+          <p className="text-muted-foreground text-lg">{t("packages.description")}</p>
         </motion.div>
 
         {/* Packages Grid */}
@@ -54,7 +54,6 @@ export function PackagesSection() {
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                    {/* Price badge */}
                     <div className="absolute top-4 right-4">
                       <span className="bg-primary text-white text-sm font-bold px-4 py-2 rounded-full">
                         {pkg.price}
@@ -88,7 +87,7 @@ export function PackagesSection() {
         >
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
             <Link href="/packages" className="flex items-center gap-2">
-              View All Packages
+              {t("packages.viewAll")}
               <ArrowRight className="h-5 w-5" />
             </Link>
           </Button>

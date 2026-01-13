@@ -4,22 +4,24 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { useLanguage } from "@/lib/language-context"
 
 const heroSlides = [
   {
     image: "/images/hero-1.jpg",
-    title: "Experience Zanzibar",
-    description: "Experience paradise with unforgettable tours and adventures",
+    titleKey: "hero.title1",
+    descriptionKey: "hero.description1",
   },
   {
     image: "/images/hero-2.jpg",
-    title: "Explore Tanzania",
-    description: "Premium safaris and exclusive island experiences await you",
+    titleKey: "hero.title2",
+    descriptionKey: "hero.description2",
   },
 ]
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -59,21 +61,21 @@ export function HeroSection() {
           className="max-w-4xl"
         >
           <motion.h1
-            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 text-balance"
+            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 text-balance"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            {heroSlides[currentSlide].title}
+            {t(heroSlides[currentSlide].titleKey)}
           </motion.h1>
 
           <motion.p
-            className="text-lg sm:text-xl md:text-2xl text-white/90 mb-10 font-body max-w-2xl mx-auto text-pretty"
+            className="text-lg sm:text-xl md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto text-pretty"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            {heroSlides[currentSlide].description}
+            {t(heroSlides[currentSlide].descriptionKey)}
           </motion.p>
 
           <motion.div
@@ -85,17 +87,17 @@ export function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg"
+              className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-lg rounded-md"
             >
-              <Link href="/zanzibar-tours">Explore Tours</Link>
+              <Link href="/zanzibar-tours">{t("hero.exploreTours")}</Link>
             </Button>
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-accent font-semibold px-8 py-6 text-lg bg-transparent"
+              className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-6 text-lg bg-transparent rounded-md"
             >
-              <Link href="/contact-us">Book Now</Link>
+              <Link href="/contact-us">{t("hero.bookNow")}</Link>
             </Button>
           </motion.div>
         </motion.div>

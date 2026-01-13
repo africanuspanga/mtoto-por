@@ -14,6 +14,7 @@ import { TopBar } from "@/components/top-bar"
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about-us" },
+  { name: "About Zanzibar", href: "/about-zanzibar" },
   { name: "Zanzibar Tours", href: "/zanzibar-tours" },
   { name: "Tanzania Safaris", href: "/tanzania-safaris" },
   { name: "Packages", href: "/packages" },
@@ -33,7 +34,7 @@ const languages = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const { currentLang, setLanguage } = useLanguage()
+  const { currentLang, setLanguage, t } = useLanguage()
   const pathname = usePathname()
 
   useEffect(() => {
@@ -51,6 +52,11 @@ export function Navbar() {
 
   const currentLangData = languages.find((l) => l.code === currentLang) || languages[0]
 
+  const getNavName = (item: { name: string; href: string }) => {
+    const key = `nav.${item.href.replace("/", "") || "home"}` as keyof typeof t
+    return t[key] || item.name
+  }
+
   return (
     <>
       <div
@@ -67,9 +73,9 @@ export function Navbar() {
           isScrolled ? "top-0 bg-background/95 backdrop-blur-md shadow-lg" : "top-0 md:top-10 bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo - Made bigger */}
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-24">
+            {/* Logo */}
             <Link href="/" onClick={handleNavClick} className="flex-shrink-0">
               <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
                 <Image
@@ -84,7 +90,7 @@ export function Navbar() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-1">
+            <div className="hidden xl:flex items-center gap-1">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -95,18 +101,18 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     onClick={handleNavClick}
-                    className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
+                    className={`px-3 py-2 text-base font-semibold transition-colors hover:text-primary ${
                       isScrolled ? "text-foreground" : "text-white"
-                    }`}
+                    } ${pathname === item.href ? "text-primary" : ""}`}
                   >
-                    {item.name}
+                    {getNavName(item)}
                   </Link>
                 </motion.div>
               ))}
             </div>
 
             {/* Right side - Language & CTA */}
-            <div className="hidden lg:flex items-center gap-4">
+            <div className="hidden xl:flex items-center gap-4">
               {/* Language Selector */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
@@ -125,6 +131,7 @@ export function Navbar() {
                     <DropdownMenuItem key={lang.code} onClick={() => setLanguage(lang.code)} className="cursor-pointer">
                       <span className="mr-2">{lang.flag}</span>
                       {lang.name}
+                      {currentLang === lang.code && <span className="ml-auto text-primary">✓</span>}
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -134,16 +141,16 @@ export function Navbar() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6">
                   <Link href="/contact-us" onClick={handleNavClick}>
-                    Book Tour
+                    {t["nav.book"] || "Book Tour"}
                   </Link>
                 </Button>
               </motion.div>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - changed lg to xl */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`lg:hidden p-2 rounded-lg ${isScrolled ? "text-foreground" : "text-white"}`}
+              className={`xl:hidden p-2 rounded-lg ${isScrolled ? "text-foreground" : "text-white"}`}
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -158,7 +165,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="fixed inset-0 z-40 lg:hidden pt-20 bg-background"
+            className="fixed inset-0 z-40 xl:hidden pt-24 bg-background overflow-y-auto"
           >
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item, index) => (
@@ -171,9 +178,11 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     onClick={handleNavClick}
-                    className="block py-3 text-lg font-medium text-foreground hover:text-primary border-b border-border"
+                    className={`block py-3 text-lg font-medium hover:text-primary border-b border-border ${
+                      pathname === item.href ? "text-primary" : "text-foreground"
+                    }`}
                   >
-                    {item.name}
+                    {getNavName(item)}
                   </Link>
                 </motion.div>
               ))}
@@ -205,7 +214,7 @@ export function Navbar() {
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6 text-lg"
               >
                 <Link href="/contact-us" onClick={handleNavClick}>
-                  Book Tour
+                  {t["nav.book"] || "Book Tour"}
                 </Link>
               </Button>
             </div>

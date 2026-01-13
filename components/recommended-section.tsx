@@ -2,9 +2,16 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 
 const partners = [
-  { name: "TripAdvisor", logo: "/images/tripadvisor.webp", width: 140, height: 50 },
+  {
+    name: "TripAdvisor",
+    logo: "/images/tripadvisor.webp",
+    width: 140,
+    height: 50,
+    url: "https://www.tripadvisor.com/Attraction_Review-g666395-d26730809-Reviews-Zanzibar_Exclusive_Tours-Unguja_City_Zanzibar_Island_Zanzibar_Archipelago.html",
+  },
   { name: "Google Reviews", logo: "/images/google-reviews.png", width: 140, height: 60 },
   { name: "Trustpilot", logo: "/images/trustpilot.png", width: 130, height: 50 },
   { name: "GetYourGuide", logo: "/images/getyourguide.png", width: 80, height: 80 },
@@ -28,7 +35,7 @@ export function RecommendedSection() {
           <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mt-3">Recommended By</h2>
         </motion.div>
 
-        {/* Partner Logos - Removed grayscale filter to show logos in original colors */}
+        {/* Partner Logos */}
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
           {partners.map((partner, index) => (
             <motion.div
@@ -39,13 +46,25 @@ export function RecommendedSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex items-center justify-center hover:scale-105 transition-all duration-300"
             >
-              <Image
-                src={partner.logo || "/placeholder.svg"}
-                alt={partner.name}
-                width={partner.width}
-                height={partner.height}
-                className="h-12 md:h-14 w-auto object-contain"
-              />
+              {partner.url ? (
+                <Link href={partner.url} target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src={partner.logo || "/placeholder.svg"}
+                    alt={partner.name}
+                    width={partner.width}
+                    height={partner.height}
+                    className="h-12 md:h-14 w-auto object-contain cursor-pointer"
+                  />
+                </Link>
+              ) : (
+                <Image
+                  src={partner.logo || "/placeholder.svg"}
+                  alt={partner.name}
+                  width={partner.width}
+                  height={partner.height}
+                  className="h-12 md:h-14 w-auto object-contain"
+                />
+              )}
             </motion.div>
           ))}
         </div>

@@ -4,11 +4,13 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Phone, Mail, ArrowRight } from "lucide-react"
+import { useLanguage } from "@/lib/language-context"
 
 export function CTASection() {
+  const { t } = useLanguage()
+
   return (
     <section className="py-20 md:py-32 bg-accent relative overflow-hidden">
-      {/* Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
@@ -23,7 +25,7 @@ export function CTASection() {
             transition={{ duration: 0.6 }}
             className="text-primary font-semibold text-sm uppercase tracking-wider"
           >
-            Start Your Journey
+            {t("cta.badge")}
           </motion.span>
 
           <motion.h2
@@ -33,7 +35,7 @@ export function CTASection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-accent-foreground mt-4 mb-6 text-balance"
           >
-            Ready for Your Zanzibar Adventure?
+            {t("cta.title")}
           </motion.h2>
 
           <motion.p
@@ -43,8 +45,7 @@ export function CTASection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-accent-foreground/80 text-lg md:text-xl font-body mb-10"
           >
-            Let us take care of the details so you can focus on enjoying your journey. Contact us today to plan your
-            perfect getaway!
+            {t("cta.subtitle")}
           </motion.p>
 
           <motion.div
@@ -60,7 +61,7 @@ export function CTASection() {
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg"
             >
               <Link href="/contact-us" className="flex items-center gap-2">
-                Book Your Tour
+                {t("cta.button")}
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
@@ -70,11 +71,10 @@ export function CTASection() {
               variant="outline"
               className="border-2 border-accent-foreground/30 text-accent-foreground hover:bg-accent-foreground/10 font-semibold px-8 py-6 text-lg bg-transparent"
             >
-              <Link href="/zanzibar-tours">View All Tours</Link>
+              <Link href="/zanzibar-tours">{t("cta.viewTours")}</Link>
             </Button>
           </motion.div>
 
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -6,10 +6,13 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { zanzibarTours } from "@/lib/tours-data"
+import { useLanguage } from "@/lib/language-context"
 
 const halfDayTours = zanzibarTours.filter((tour) => tour.category === "half-day").slice(0, 3)
 
 export function HalfDayToursSection() {
+  const { t } = useLanguage()
+
   return (
     <section className="py-20 md:py-28 bg-gradient-to-b from-secondary/5 to-secondary/15">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,14 +26,12 @@ export function HalfDayToursSection() {
         >
           <div className="inline-flex items-center gap-2 bg-secondary/20 text-secondary px-4 py-2 rounded-full mb-4">
             <Timer className="h-4 w-4" />
-            <span className="text-sm font-semibold uppercase tracking-wider">Half Day Tours</span>
+            <span className="text-sm font-semibold uppercase tracking-wider">{t("halfDayTours.badge")}</span>
           </div>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-            Quick Adventures, Lasting Memories
+            {t("halfDayTours.title")}
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Perfect for those short on time but big on adventure. Explore the best of Zanzibar in just a few hours.
-          </p>
+          <p className="text-muted-foreground text-lg">{t("halfDayTours.description")}</p>
         </motion.div>
 
         {/* Tours Grid */}
@@ -88,7 +89,7 @@ export function HalfDayToursSection() {
         >
           <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-white">
             <Link href="/zanzibar-tours" className="flex items-center gap-2">
-              View Half Day Tours
+              {t("halfDayTours.viewAll")}
               <ArrowRight className="h-5 w-5" />
             </Link>
           </Button>
