@@ -39,7 +39,7 @@ export default function ContactUsPage() {
     {
       icon: MapPin,
       titleKey: "contactPage.address",
-      details: ["Jumbi - Zanzibar", "P.O.Box 2731, Tanzania"],
+      details: ["Jumbi - Zanzibar", "Tanzania"],
     },
     {
       icon: Phone,
@@ -75,7 +75,13 @@ export default function ContactUsPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+
+    const message = `Hi! I'd like to get in touch.%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AMessage: ${formData.message}`
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=255777411991&text=${message}&type=phone_number&app_absent=0`
+
+    await new Promise((resolve) => setTimeout(resolve, 500))
+    window.open(whatsappUrl, "_blank")
+
     setSubmitted(true)
     setIsSubmitting(false)
     setFormData({ name: "", email: "", phone: "", message: "" })

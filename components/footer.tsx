@@ -130,7 +130,7 @@ export function Footer() {
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <div className="text-white/70 font-body">
                   <p>Jumbi - Zanzibar</p>
-                  <p>P.O.Box 2731, Tanzania</p>
+                  <p>Tanzania</p>
                 </div>
               </li>
               <li className="flex items-center gap-3">

@@ -31,8 +31,11 @@ export default function BookingPage() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    const message = `Hi! I'd like to make a booking.%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0APackage: ${formData.package}%0ATravelers: ${formData.travelers}%0AArrival: ${formData.arrivalDate}%0ADeparture: ${formData.departureDate}%0AMessage: ${formData.message}`
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=255777411991&text=${message}&type=phone_number&app_absent=0`
+
+    await new Promise((resolve) => setTimeout(resolve, 1000))
+    window.open(whatsappUrl, "_blank")
 
     setIsSubmitting(false)
     setIsSubmitted(true)
