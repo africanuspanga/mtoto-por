@@ -496,6 +496,8 @@ export const safariPackages: SafariPackage[] = [
   },
 ]
 
+export const safarisData = safariPackages
+
 export function getSafariBySlug(slug: string): SafariPackage | undefined {
   return safariPackages.find((safari) => safari.slug === slug)
 }

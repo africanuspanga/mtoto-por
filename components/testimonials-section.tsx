@@ -33,6 +33,13 @@ const testimonials = [
     country: "South Africa",
     flag: "🇿🇦",
   },
+  {
+    name: "Gilda Costa",
+    text: "If you are looking for a guide in Zanzibar, look no further—Mussa is simply the best! We were a group traveling together and Mussa took care of us from the very first moment he picked us up at the airport. For two full weeks, he was our constant companion, organizing and joining us on every single tour and excursion we did. What sets Mussa apart is not just his deep knowledge of the island, but his genuine kindness, punctuality, and professionalism. He went above and beyond to ensure every detail was perfect, making us feel safe, welcome, and like part of the family. Whether it was navigating the best spots or sharing local insights, he made our trip seamless and unforgettable. You can 100% trust Mussa. With him, you are definitely in the best hands. He is more than just a guide; he became a true friend to our group. Asante sana, Mussa, for the trip of a lifetime!",
+    rating: 5,
+    country: "Spain",
+    flag: "🇪🇸",
+  },
 ]
 
 export function TestimonialsSection() {

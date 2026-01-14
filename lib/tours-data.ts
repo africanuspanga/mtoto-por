@@ -213,7 +213,7 @@ export const zanzibarTours: ZanzibarTour[] = [
       "Swimming Equipment",
       "Lunch at the Local Spice Farm",
       "Tropical Fruits",
-      "Drinking Water",
+      "Soft Drinks",
       "All government fees",
       "Hotel Pick up/Drop-off (extra charge)",
     ],
@@ -621,3 +621,5 @@ export const getRelatedTours = (currentSlug: string, limit = 3) => {
     .filter((tour) => tour.slug !== currentSlug && tour.category === currentTour.category)
     .slice(0, limit)
 }
+
+export const allTours = zanzibarTours
