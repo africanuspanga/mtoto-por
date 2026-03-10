@@ -28,7 +28,7 @@ export function SafariDetailPageClient() {
   const whatsappMessage = encodeURIComponent(
     `Hello! I'm interested in booking the ${safari.title} safari. Please send me more information.`,
   )
-  const whatsappUrl = `https://wa.me/255777411991?text=${whatsappMessage}`
+  const whatsappUrl = `https://wa.me/255717079200?text=${whatsappMessage}`
 
   return (
     <main className="min-h-screen bg-background">
@@ -298,18 +298,18 @@ export function SafariDetailPageClient() {
 
                       <div className="pt-4 border-t space-y-3">
                         <a
-                          href="tel:+255777411991"
+                          href="tel:+255717079200"
                           className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                         >
                           <Phone className="w-5 h-5 text-primary" />
-                          <span>+255 777 411 991</span>
+                          <span>+255 717 079200</span>
                         </a>
                         <a
-                          href="mailto:info@zanzibarexclusivetours.com"
+                          href="mailto:amtopwa@yahoo.com"
                           className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                         >
                           <Mail className="w-5 h-5 text-primary" />
-                          <span className="text-sm">info@zanzibarexclusivetours.com</span>
+                          <span className="text-sm">amtopwa@yahoo.com</span>
                         </a>
                       </div>
                     </CardContent>

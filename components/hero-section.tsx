@@ -4,24 +4,22 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { useLanguage } from "@/lib/language-context"
 
 const heroSlides = [
   {
-    image: "/images/hero-1.jpg",
-    titleKey: "hero.title1",
-    descriptionKey: "hero.description1",
+    image: "/mtoto por images/mtoto-por-zanzi.jpg",
+    title: "Explore Zanzibar & East Africa",
+    description: "Experience unforgettable adventures, safaris, island tours and travel services with Mtoto Por Tours.",
   },
   {
-    image: "/images/hero-2.jpg",
-    titleKey: "hero.title2",
-    descriptionKey: "hero.description2",
+    image: "/mtoto por images/new mtoto pot images/featured/lions-safari.jpg",
+    title: "Discover Tanzania's Wildlife",
+    description: "Premium safaris and exclusive island experiences await you in the heart of Africa",
   },
 ]
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const { t } = useLanguage()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -45,9 +43,12 @@ export function HeroSection() {
           className="absolute inset-0"
           style={{ zIndex: index === currentSlide ? 1 : 0 }}
         >
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${slide.image})` }} />
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+          <div 
+            className="absolute inset-0 bg-cover bg-center" 
+            style={{ backgroundImage: `url('${slide.image}')` }} 
+          />
+          {/* Overlay - darker for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
         </motion.div>
       ))}
 
@@ -61,12 +62,12 @@ export function HeroSection() {
           className="max-w-4xl"
         >
           <motion.h1
-            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 text-balance"
+            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 text-balance"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            {t(heroSlides[currentSlide].titleKey)}
+            {heroSlides[currentSlide].title}
           </motion.h1>
 
           <motion.p
@@ -75,7 +76,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            {t(heroSlides[currentSlide].descriptionKey)}
+            {heroSlides[currentSlide].description}
           </motion.p>
 
           <motion.div
@@ -84,23 +85,38 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
+            {/* Gold CTA button */}
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-lg rounded-md"
+              className="bg-[#f7c43c] hover:bg-[#e5b234] text-[#1e3f23] font-bold px-8 py-6 text-lg rounded-md"
             >
-              <Link href="/zanzibar-tours">{t("hero.exploreTours")}</Link>
+              <Link href="/zanzibar-tours">Explore Tours</Link>
             </Button>
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-6 text-lg bg-transparent rounded-md"
+              className="border-2 border-white text-white hover:bg-white hover:text-[#1e3f23] font-semibold px-8 py-6 text-lg bg-transparent rounded-md"
             >
-              <Link href="/contact-us">{t("hero.bookNow")}</Link>
+              <Link href="/contact-us">Book Your Tour</Link>
             </Button>
           </motion.div>
         </motion.div>
+      </div>
+
+      {/* Slide indicators */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+        {heroSlides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all ${
+              index === currentSlide ? "bg-[#f7c43c] w-8" : "bg-white/50 hover:bg-white/80"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   )

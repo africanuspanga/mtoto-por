@@ -14,17 +14,17 @@ const features = [
   {
     icon: Compass,
     title: "Expert Guides",
-    description: "Professional English & Polish speaking guides",
+    description: "Professional English speaking guides",
   },
   {
     icon: TreePine,
     title: "Iconic Parks",
-    description: "Serengeti, Ngorongoro, Selous & more",
+    description: "Serengeti, Ngorongoro, Selous, Gombe & more",
   },
   {
     icon: Camera,
-    title: "Big Five",
-    description: "Lions, Elephants, Rhinos, Buffalos, Leopards",
+    title: "Big Five & Chimps",
+    description: "Lions, Elephants, Rhinos, Buffalos, Leopards, Chimpanzees",
   },
   {
     icon: Shield,
@@ -44,7 +44,7 @@ export default function TanzaniaSafarisPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/safaris/selous-lions.webp')",
+            backgroundImage: "url('/mtoto por images/gombe 1.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
@@ -52,15 +52,15 @@ export default function TanzaniaSafarisPage() {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center pt-20">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <span className="inline-block bg-primary/90 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Tanzania Safaris from Zanzibar
+            <span className="inline-block bg-[#f7c43c] text-[#1e3f23] px-4 py-2 rounded-full text-sm font-bold mb-6">
+              Tanzania Safaris & Chimpanzee Tracking
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 text-balance">
-              Discover the Wild Heart of <span className="text-primary">Africa</span>
+              Discover the Wild Heart of <span className="text-[#f7c43c]">Africa</span>
             </h1>
             <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-8 text-pretty">
-              Experience unforgettable wildlife adventures in Tanzania's most iconic national parks. From day trips to
-              multi-day expeditions.
+              Experience unforgettable wildlife adventures from the Serengeti plains to Gombe's chimpanzees. 
+              Day trips to multi-day expeditions available.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8" asChild>

@@ -10,10 +10,11 @@ export function CTASection() {
   const { t } = useLanguage()
 
   return (
-    <section className="py-20 md:py-32 bg-accent relative overflow-hidden">
+    <section className="py-20 md:py-32 bg-[#1e3f23] relative overflow-hidden">
+      {/* Decorative elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#f7c43c] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#f7c43c] rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -23,7 +24,7 @@ export function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-primary font-semibold text-sm uppercase tracking-wider"
+            className="text-[#f7c43c] font-semibold text-sm uppercase tracking-wider"
           >
             {t("cta.badge")}
           </motion.span>
@@ -33,7 +34,7 @@ export function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-accent-foreground mt-4 mb-6 text-balance"
+            className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-4 mb-6 text-balance"
           >
             {t("cta.title")}
           </motion.h2>
@@ -43,7 +44,7 @@ export function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-accent-foreground/80 text-lg md:text-xl font-body mb-10"
+            className="text-white/80 text-lg md:text-xl font-body mb-10"
           >
             {t("cta.subtitle")}
           </motion.p>
@@ -58,7 +59,7 @@ export function CTASection() {
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg"
+              className="bg-[#f7c43c] hover:bg-[#e5b234] text-[#1e3f23] font-bold px-8 py-6 text-lg"
             >
               <Link href="/contact-us" className="flex items-center gap-2">
                 {t("cta.button")}
@@ -69,9 +70,9 @@ export function CTASection() {
               asChild
               size="lg"
               variant="outline"
-              className="border-2 border-accent-foreground/30 text-accent-foreground hover:bg-accent-foreground/10 font-semibold px-8 py-6 text-lg bg-transparent"
+              className="border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-6 text-lg bg-transparent"
             >
-              <Link href="/zanzibar-tours">{t("cta.viewTours")}</Link>
+              <Link href="/contact-us">{t("cta.viewTours")}</Link>
             </Button>
           </motion.div>
 
@@ -80,19 +81,19 @@ export function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6 text-accent-foreground/80"
+            className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/70"
           >
-            <a href="tel:+255777411991" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <a href="tel:+255717079200" className="flex items-center gap-2 hover:text-[#f7c43c] transition-colors">
               <Phone className="h-5 w-5" />
-              <span className="font-body">+255 777 411 991</span>
+              <span className="font-body">+255 717 079200</span>
             </a>
-            <span className="hidden sm:block text-accent-foreground/30">|</span>
+            <span className="hidden sm:block text-white/30">|</span>
             <a
-              href="mailto:info@zanzibarexclusivetours.com"
-              className="flex items-center gap-2 hover:text-primary transition-colors"
+              href="mailto:amtopwa@yahoo.com"
+              className="flex items-center gap-2 hover:text-[#f7c43c] transition-colors"
             >
               <Mail className="h-5 w-5" />
-              <span className="font-body">info@zanzibarexclusivetours.com</span>
+              <span className="font-body">amtopwa@yahoo.com</span>
             </a>
           </motion.div>
         </div>

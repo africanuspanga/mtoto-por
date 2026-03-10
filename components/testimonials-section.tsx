@@ -6,39 +6,39 @@ import { useLanguage } from "@/lib/language-context"
 
 const testimonials = [
   {
-    name: "Enoch Jenny",
-    text: "We went on multiple tours during our honeymoon. Musa was informative, professional, and friendly. From the spice tour to Stone Town and sunset sailing, every day was full of cherished memories. We can't wait to return!",
+    name: "Erik Johansen",
+    text: "Mtoto Por Tours made our family vacation absolutely magical! From the moment we landed in Zanzibar, everything was perfectly arranged. The chimpanzee tracking in Gombe was a dream come true. Highly recommend their services!",
+    rating: 5,
+    country: "Norway",
+    flag: "🇳🇴",
+  },
+  {
+    name: "Sofie Larsen",
+    text: "What an incredible experience with Mtoto Por Tours! We explored Stone Town, enjoyed spice tours, and relaxed on the most beautiful beaches. The team was professional, friendly, and made us feel like family. Tusinde tak!",
+    rating: 5,
+    country: "Denmark",
+    flag: "🇩🇰",
+  },
+  {
+    name: "Marco Rossi",
+    text: "Bellissimo! Mtoto Por Tours organized our safari to Serengeti and it exceeded all expectations. Seeing the Big Five was amazing, and the guides were incredibly knowledgeable. The perfect mix of adventure and comfort.",
+    rating: 5,
+    country: "Italy",
+    flag: "🇮🇹",
+  },
+  {
+    name: "Jennifer Miller",
+    text: "As an American traveling to East Africa for the first time, I was nervous. But Mtoto Por Tours took care of everything! From airport pickups to amazing tours, they made our honeymoon unforgettable. Thank you for the memories!",
     rating: 5,
     country: "United States",
     flag: "🇺🇸",
   },
   {
-    name: "F C Alvarez",
-    text: "They picked us up and took us everywhere - shopping, sites, even Freddie Mercury's birthplace. They speak excellent English and explained everything in Swahili too. Most were greetings and welcomes. I love them!",
+    name: "Yuki Tanaka",
+    text: "Mtoto Por Tours provided exceptional service during our visit to Zanzibar. The attention to detail, the warm hospitality, and the beautiful locations made this trip one of our best ever. Arigato gozaimasu for everything!",
     rating: 5,
-    country: "Spain",
-    flag: "🇪🇸",
-  },
-  {
-    name: "Dave Conrod",
-    text: "Being from Western Canada, we had little experience in East Africa. Mr. Mussa Shaaban was highly knowledgeable, professional, polite, patient with a good sense of humor. Our Stone Town tour was well done and informative.",
-    rating: 5,
-    country: "Canada",
-    flag: "🇨🇦",
-  },
-  {
-    name: "Mapula Phoko",
-    text: "Thank you Zanzibar Exclusive Tours. They are professional, patient and punctual. From the time we landed at the airport through their transfers to and from the hotel - exceptional service throughout!",
-    rating: 5,
-    country: "South Africa",
-    flag: "🇿🇦",
-  },
-  {
-    name: "Gilda Costa",
-    text: "If you are looking for a guide in Zanzibar, look no further—Mussa is simply the best! We were a group traveling together and Mussa took care of us from the very first moment he picked us up at the airport. For two full weeks, he was our constant companion, organizing and joining us on every single tour and excursion we did. What sets Mussa apart is not just his deep knowledge of the island, but his genuine kindness, punctuality, and professionalism. He went above and beyond to ensure every detail was perfect, making us feel safe, welcome, and like part of the family. Whether it was navigating the best spots or sharing local insights, he made our trip seamless and unforgettable. You can 100% trust Mussa. With him, you are definitely in the best hands. He is more than just a guide; he became a true friend to our group. Asante sana, Mussa, for the trip of a lifetime!",
-    rating: 5,
-    country: "Spain",
-    flag: "🇪🇸",
+    country: "Japan",
+    flag: "🇯🇵",
   },
 ]
 
@@ -60,7 +60,7 @@ export function TestimonialsSection() {
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
             {t("testimonials.title")}
           </h2>
-          <p className="text-muted-foreground text-lg font-body">{t("testimonials.subtitle")}</p>
+          <p className="text-muted-foreground text-lg font-body">{t("testimonials.description")}</p>
         </motion.div>
 
         {/* Testimonials Grid */}

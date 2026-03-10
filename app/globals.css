@@ -3,73 +3,74 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Zanzibar Exclusive Tours & Safaris - Brand Colors */
+/* Mtoto Por Tours - Brand Colors */
 :root {
-  /* Primary - Sunset Orange */
-  --background: oklch(0.99 0.005 80);
-  --foreground: oklch(0.2 0.02 30);
+  /* Primary - Deep Forest Green */
+  --background: oklch(0.99 0.005 140);
+  --foreground: oklch(0.2 0.02 140);
 
-  /* Cards - Cream/Sand */
-  --card: oklch(0.98 0.01 80);
-  --card-foreground: oklch(0.2 0.02 30);
+  /* Cards - Light Cream */
+  --card: oklch(0.98 0.01 100);
+  --card-foreground: oklch(0.2 0.02 140);
 
-  --popover: oklch(0.99 0.005 80);
-  --popover-foreground: oklch(0.2 0.02 30);
+  --popover: oklch(0.99 0.005 140);
+  --popover-foreground: oklch(0.2 0.02 140);
 
-  /* Primary - Sunset Orange #ff6a1f */
-  --primary: oklch(0.65 0.2 40);
+  /* Primary - Deep Green #1e3f23 */
+  --primary: oklch(0.35 0.08 145);
   --primary-foreground: oklch(0.99 0 0);
 
-  /* Secondary - Ocean Blue #2892da */
-  --secondary: oklch(0.62 0.15 230);
-  --secondary-foreground: oklch(0.99 0 0);
+  /* Secondary - Gold/Yellow #f7c43c */
+  --secondary: oklch(0.82 0.16 85);
+  --secondary-foreground: oklch(0.2 0.02 140);
 
-  /* Muted - Light Sand */
-  --muted: oklch(0.95 0.01 80);
-  --muted-foreground: oklch(0.45 0.02 30);
+  /* Muted - Light Sage */
+  --muted: oklch(0.95 0.01 140);
+  --muted-foreground: oklch(0.45 0.02 140);
 
-  /* Accent - Dark Brown #3e2021 */
-  --accent: oklch(0.25 0.04 25);
+  /* Accent - Dark Green */
+  --accent: oklch(0.25 0.06 145);
   --accent-foreground: oklch(0.99 0 0);
 
-  /* Added dark color for CTA sections */
-  --dark: oklch(0.15 0.01 30);
+  /* Dark sections */
+  --dark: oklch(0.15 0.01 140);
   --dark-foreground: oklch(0.99 0 0);
 
-  /* Added ocean color */
-  --ocean: oklch(0.62 0.15 230);
-  --ocean-foreground: oklch(0.99 0 0);
+  /* Gold accent */
+  --gold: oklch(0.82 0.16 85);
+  --gold-foreground: oklch(0.2 0.02 140);
 
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.99 0 0);
 
-  --border: oklch(0.9 0.01 80);
-  --input: oklch(0.92 0.01 80);
-  --ring: oklch(0.65 0.2 40);
+  --border: oklch(0.9 0.01 140);
+  --input: oklch(0.92 0.01 140);
+  --ring: oklch(0.35 0.08 145);
 
-  /* Chart colors - Ocean inspired */
-  --chart-1: oklch(0.65 0.2 40);
-  --chart-2: oklch(0.62 0.15 230);
-  --chart-3: oklch(0.25 0.04 25);
-  --chart-4: oklch(0.75 0.12 200);
-  --chart-5: oklch(0.7 0.15 50);
+  /* Chart colors - Nature inspired */
+  --chart-1: oklch(0.35 0.08 145);
+  --chart-2: oklch(0.82 0.16 85);
+  --chart-3: oklch(0.25 0.06 145);
+  --chart-4: oklch(0.65 0.12 160);
+  --chart-5: oklch(0.7 0.15 80);
 
   --radius: 0.75rem;
 
-  --sidebar: oklch(0.98 0.01 80);
-  --sidebar-foreground: oklch(0.2 0.02 30);
-  --sidebar-primary: oklch(0.65 0.2 40);
+  --sidebar: oklch(0.98 0.01 140);
+  --sidebar-foreground: oklch(0.2 0.02 140);
+  --sidebar-primary: oklch(0.35 0.08 145);
   --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.25 0.04 25);
+  --sidebar-accent: oklch(0.25 0.06 145);
   --sidebar-accent-foreground: oklch(0.99 0 0);
-  --sidebar-border: oklch(0.9 0.01 80);
-  --sidebar-ring: oklch(0.65 0.2 40);
+  --sidebar-border: oklch(0.9 0.01 140);
+  --sidebar-ring: oklch(0.35 0.08 145);
 }
 
 @theme inline {
-  --font-sans: "Playfair Display", "Georgia", serif;
+  --font-sans: "Montserrat", "system-ui", sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback";
-  --font-body: "Inter", "system-ui", sans-serif;
+  --font-body: "Open Sans", "system-ui", sans-serif;
+  --font-display: "Montserrat", "system-ui", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -84,11 +85,10 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  /* Added dark and ocean color mappings */
   --color-dark: var(--dark);
   --color-dark-foreground: var(--dark-foreground);
-  --color-ocean: var(--ocean);
-  --color-ocean-foreground: var(--ocean-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -124,11 +124,12 @@
 
 /* Custom utility classes */
 .font-display {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 700;
 }
 
 .font-body {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Open Sans", system-ui, sans-serif;
 }
 
 /* Smooth scrolling */
@@ -136,7 +137,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Green theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -151,5 +152,29 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary);
+  background: var(--accent);
+}
+
+/* Gold accent button style */
+.btn-gold {
+  background-color: #f7c43c;
+  color: #1e3f23;
+  font-weight: 600;
+}
+
+.btn-gold:hover {
+  background-color: #e5b234;
+}
+
+/* Green background with gold accent */
+.bg-brand-green {
+  background-color: #1e3f23;
+}
+
+.text-brand-gold {
+  color: #f7c43c;
+}
+
+.bg-brand-gold {
+  background-color: #f7c43c;
 }

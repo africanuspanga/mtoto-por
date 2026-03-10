@@ -17,7 +17,7 @@ export function SafariCard({ safari, index }: SafariCardProps) {
   const whatsappMessage = encodeURIComponent(
     `Hello! I'm interested in the ${safari.title} safari package. Please send me more information.`,
   )
-  const whatsappUrl = `https://wa.me/255777411991?text=${whatsappMessage}`
+  const whatsappUrl = `https://wa.me/255717079200?text=${whatsappMessage}`
 
   // Get the starting price
   const startingPrice = safari.pricing[0]?.prices[safari.pricing[0].prices.length - 1]?.price || "Contact for price"

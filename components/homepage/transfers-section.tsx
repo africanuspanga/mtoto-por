@@ -15,19 +15,19 @@ export function TransfersSection() {
       nameKey: "transfers.alphard.name",
       capacityKey: "transfers.alphard.capacity",
       descriptionKey: "transfers.alphard.description",
-      image: "/images/transfers/toyota-alphard.webp",
+      image: "/mtoto por images/images/transfers/toyota-alphard.webp",
     },
     {
       nameKey: "transfers.hiace.name",
       capacityKey: "transfers.hiace.capacity",
       descriptionKey: "transfers.hiace.description",
-      image: "/images/transfers/toyota-hiace.webp",
+      image: "/mtoto por images/images/transfers/toyota-hiace.webp",
     },
     {
       nameKey: "transfers.coaster.name",
       capacityKey: "transfers.coaster.capacity",
       descriptionKey: "transfers.coaster.description",
-      image: "/images/transfers/toyota-coaster.webp",
+      image: "/mtoto por images/images/transfers/toyota-coaster.webp",
     },
   ]
 

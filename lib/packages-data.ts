@@ -25,7 +25,7 @@ export const packagesData: PackageData[] = [
     title: "Zanzibar 2 Days 1 Night Package",
     duration: "2 Days",
     nights: "1 Night",
-    cardImage: "/images/packages/dhow-palace.webp",
+    cardImage: "/mtoto por images/images/packages/dhow-palace.webp",
     summary:
       "Don't have enough time for Zanzibar? This quick package covers Spice Farm Tour, Prison Island with Snorkeling, and Stone Town with Shopping - perfect for a short visit!",
     overview:
@@ -65,9 +65,9 @@ export const packagesData: PackageData[] = [
       "International Airlines",
     ],
     images: [
-      "/images/packages/dhow-palace.webp",
-      "/images/packages/2days1night-a.webp",
-      "/images/packages/2days1night-b.webp",
+      "/mtoto por images/images/packages/dhow-palace.webp",
+      "/mtoto por images/images/packages/2days1night-a.webp",
+      "/mtoto por images/images/packages/2days1night-b.webp",
     ],
   },
   {
@@ -75,7 +75,7 @@ export const packagesData: PackageData[] = [
     title: "3 Days 2 Nights Stone Town Experience",
     duration: "3 Days",
     nights: "2 Nights",
-    cardImage: "/images/packages/tembo-hotel.webp",
+    cardImage: "/mtoto por images/images/packages/tembo-hotel.webp",
     price: "From $810",
     summary:
       "Immerse yourself in Zanzibar's culture with Stone Town Tour, Sunset Dhow Cruise, aromatic Spice Farm visit, and Prison Island adventure with giant tortoises.",
@@ -122,9 +122,9 @@ export const packagesData: PackageData[] = [
       "International flights",
     ],
     images: [
-      "/images/packages/tembo-hotel.webp",
-      "/images/packages/dhow-palace.webp",
-      "/images/packages/2days1night-a.webp",
+      "/mtoto por images/images/packages/tembo-hotel.webp",
+      "/mtoto por images/images/packages/dhow-palace.webp",
+      "/mtoto por images/images/packages/2days1night-a.webp",
     ],
   },
   {
@@ -132,7 +132,7 @@ export const packagesData: PackageData[] = [
     title: "Zanzibar 3 Days 2 Nights Package",
     duration: "3 Days",
     nights: "2 Nights",
-    cardImage: "/images/packages/mizingani-hotel.webp",
+    cardImage: "/mtoto por images/images/packages/mizingani-hotel.webp",
     summary:
       "Perfect for a short getaway! Explore Stone Town's rich history, visit aromatic Spice Farms, and meet giant tortoises at Prison Island. Includes hotels, transfers, and all activities.",
     overview:
@@ -178,9 +178,9 @@ export const packagesData: PackageData[] = [
       "International Airlines",
     ],
     images: [
-      "/images/packages/mizingani-hotel.webp",
-      "/images/packages/2days1night-a.webp",
-      "/images/packages/dhow-palace.webp",
+      "/mtoto por images/images/packages/mizingani-hotel.webp",
+      "/mtoto por images/images/packages/2days1night-a.webp",
+      "/mtoto por images/images/packages/dhow-palace.webp",
     ],
   },
   {
@@ -188,7 +188,7 @@ export const packagesData: PackageData[] = [
     title: "4 Days 3 Nights Stone Town Stay",
     duration: "4 Days",
     nights: "3 Nights",
-    cardImage: "/images/packages/safari-blue-sandbank.webp",
+    cardImage: "/mtoto por images/images/packages/safari-blue-sandbank.webp",
     price: "From $1,044",
     summary:
       "Complete Stone Town experience with historical tour, Spice Farm, Prison Island, and exclusive Dolphin Tour with snorkeling at Mnemba Island coral reefs.",
@@ -242,9 +242,9 @@ export const packagesData: PackageData[] = [
       "International flights",
     ],
     images: [
-      "/images/packages/safari-blue-sandbank.webp",
-      "/images/packages/swimming-turtles.webp",
-      "/images/packages/rock-arch.webp",
+      "/mtoto por images/images/packages/safari-blue-sandbank.webp",
+      "/mtoto por images/images/packages/swimming-turtles.webp",
+      "/mtoto por images/images/packages/rock-arch.webp",
     ],
   },
   {
@@ -252,7 +252,7 @@ export const packagesData: PackageData[] = [
     title: "Zanzibar 4 Days 3 Nights Package",
     duration: "4 Days",
     nights: "3 Nights",
-    cardImage: "/images/packages/2days1night-b.webp",
+    cardImage: "/mtoto por images/images/packages/2days1night-b.webp",
     summary:
       "Experience the best of Zanzibar! Full-day Safari Blue sailing adventure, Stone Town exploration, Spice Farm tour, and Prison Island - all with premium accommodation.",
     overview:
@@ -304,9 +304,9 @@ export const packagesData: PackageData[] = [
       "International Airlines",
     ],
     images: [
-      "/images/packages/2days1night-b.webp",
-      "/images/packages/white-sands.webp",
-      "/images/packages/mizingani-hotel.webp",
+      "/mtoto por images/images/packages/2days1night-b.webp",
+      "/mtoto por images/images/packages/white-sands.webp",
+      "/mtoto por images/images/packages/mizingani-hotel.webp",
     ],
   },
   {
@@ -314,7 +314,7 @@ export const packagesData: PackageData[] = [
     title: "Zanzibar 5 Days 4 Nights Package",
     duration: "5 Days",
     nights: "4 Nights",
-    cardImage: "/images/packages/white-sands.webp",
+    cardImage: "/mtoto por images/images/packages/white-sands.webp",
     summary:
       "The ultimate Zanzibar experience! Safari Blue adventure, Stone Town & Spice Farm, plus exclusive lunch at The Rock Restaurant with snorkeling at Blue Lagoon.",
     overview:
@@ -372,9 +372,9 @@ export const packagesData: PackageData[] = [
       "International Airlines",
     ],
     images: [
-      "/images/packages/white-sands.webp",
-      "/images/packages/2days1night-a.webp",
-      "/images/packages/dhow-palace.webp",
+      "/mtoto por images/images/packages/white-sands.webp",
+      "/mtoto por images/images/packages/2days1night-a.webp",
+      "/mtoto por images/images/packages/dhow-palace.webp",
     ],
   },
   {
@@ -382,7 +382,7 @@ export const packagesData: PackageData[] = [
     title: "6 Days 5 Nights Town & Beach Combo",
     duration: "6 Days",
     nights: "5 Nights",
-    cardImage: "/images/packages/kendwa-rock.webp",
+    cardImage: "/mtoto por images/images/packages/kendwa-rock.webp",
     price: "From $3,175",
     summary:
       "The perfect blend of culture and relaxation! 2 nights in historic Stone Town plus 3 nights at a luxury beach resort with all-inclusive amenities.",
@@ -447,9 +447,9 @@ export const packagesData: PackageData[] = [
       "Travel insurance",
     ],
     images: [
-      "/images/packages/kendwa-rock.webp",
-      "/images/packages/white-sands.webp",
-      "/images/packages/luxury-villa.webp",
+      "/mtoto por images/images/packages/kendwa-rock.webp",
+      "/mtoto por images/images/packages/white-sands.webp",
+      "/mtoto por images/images/packages/luxury-villa.webp",
     ],
   },
   {
@@ -457,7 +457,7 @@ export const packagesData: PackageData[] = [
     title: "7 Days 6 Nights Ultimate Zanzibar",
     duration: "7 Days",
     nights: "6 Nights",
-    cardImage: "/images/packages/luxury-villa.webp",
+    cardImage: "/mtoto por images/images/packages/luxury-villa.webp",
     price: "From $3,715",
     summary:
       "The ultimate luxury Zanzibar experience! 2 nights at 5-star Serena Hotel in Stone Town plus 4 nights at a premium beach resort with comprehensive tours.",
@@ -529,9 +529,9 @@ export const packagesData: PackageData[] = [
       "Travel insurance",
     ],
     images: [
-      "/images/packages/luxury-villa.webp",
-      "/images/packages/kendwa-rock.webp",
-      "/images/packages/rock-arch.webp",
+      "/mtoto por images/images/packages/luxury-villa.webp",
+      "/mtoto por images/images/packages/kendwa-rock.webp",
+      "/mtoto por images/images/packages/rock-arch.webp",
     ],
   },
 ]

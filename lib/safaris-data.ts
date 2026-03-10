@@ -37,8 +37,8 @@ export const safariPackages: SafariPackage[] = [
     duration: "1 Day",
     durationDays: 1,
     location: "Selous National Park",
-    cardImage: "/images/safaris/selous-elephants.webp",
-    images: ["/images/safaris/selous-elephants.webp", "/images/safaris/selous-lions.webp"],
+    cardImage: "/mtoto por images/new mtoto pot images/safari/selous.jpg",
+    images: ["/mtoto por images/new mtoto pot images/safari/selous.jpg", "/mtoto por images/images/safaris/selous-lions.webp"],
     summary:
       "Experience Africa's largest nature reserve just 1 hour flight from Zanzibar. Spot crocodiles, hippos, lions, elephants, giraffes, buffalos, zebras, and antelopes.",
     description:
@@ -92,8 +92,8 @@ export const safariPackages: SafariPackage[] = [
     duration: "1 Day",
     durationDays: 1,
     location: "Mikumi National Park",
-    cardImage: "/images/safaris/mikumi-impalas.webp",
-    images: ["/images/safaris/mikumi-impalas.webp", "/images/safaris/mikumi-lion-hunt.webp"],
+    cardImage: "/mtoto por images/new mtoto pot images/packages/mikumi-safari.jpg",
+    images: ["/mtoto por images/new mtoto pot images/packages/mikumi-safari.jpg", "/mtoto por images/images/safaris/mikumi-lion-hunt.webp"],
     summary:
       "Explore Mikumi National Park - Tanzania's fourth largest park with an area of 3,230 km². Just 1 hour flight from Zanzibar.",
     description:
@@ -124,7 +124,7 @@ export const safariPackages: SafariPackage[] = [
       {
         type: "Standard",
         prices: [
-          { groupSize: "Adult", price: "$480" },
+          { groupSize: "Adult", price: "$500" },
           { groupSize: "Child (up to 11 years)", price: "$400" },
         ],
       },
@@ -147,8 +147,8 @@ export const safariPackages: SafariPackage[] = [
     duration: "2 Days / 1 Night",
     durationDays: 2,
     location: "Selous Game Reserve",
-    cardImage: "/images/safaris/selous-lions.webp",
-    images: ["/images/safaris/selous-lions.webp", "/images/safaris/selous-elephants.webp"],
+    cardImage: "/mtoto por images/images/safaris/selous-lions.webp",
+    images: ["/mtoto por images/images/safaris/selous-lions.webp", "/mtoto por images/new mtoto pot images/safari/selous.jpg"],
     summary:
       "An extended safari adventure in one of Africa's largest and most diverse wildlife reserves with overnight accommodation.",
     description:
@@ -219,8 +219,8 @@ export const safariPackages: SafariPackage[] = [
     duration: "2 Days / 1 Night",
     durationDays: 2,
     location: "Mikumi National Park",
-    cardImage: "/images/safaris/mikumi-lion-hunt.webp",
-    images: ["/images/safaris/mikumi-lion-hunt.webp", "/images/safaris/mikumi-impalas.webp"],
+    cardImage: "/mtoto por images/images/safaris/mikumi-lion-hunt.webp",
+    images: ["/mtoto por images/images/safaris/mikumi-lion-hunt.webp", "/mtoto por images/new mtoto pot images/packages/mikumi-safari.jpg"],
     summary: "A compact and exciting 2-day safari option with various accommodation choices from budget to luxury.",
     description:
       "2-Days Safari at Mikumi National Park which starts from Zanzibar is a compact and exciting option for wildlife. This is the second shortest Safari after the Mikumi Day trip. It provides various accommodation options from budget to luxury.",
@@ -262,21 +262,11 @@ export const safariPackages: SafariPackage[] = [
       {
         type: "English-Speaking Guide",
         prices: [
-          { groupSize: "2 people", price: "$600/person" },
+          { groupSize: "2 people", price: "$500/person" },
           { groupSize: "3 people", price: "$500/person" },
-          { groupSize: "4 people", price: "$450/person" },
-          { groupSize: "5 people", price: "$425/person" },
-          { groupSize: "6 people", price: "$400/person" },
-        ],
-      },
-      {
-        type: "Polish-Speaking Guide",
-        prices: [
-          { groupSize: "2 people", price: "$700/person" },
-          { groupSize: "3 people", price: "$570/person" },
           { groupSize: "4 people", price: "$500/person" },
-          { groupSize: "5 people", price: "$475/person" },
-          { groupSize: "6 people", price: "$450/person" },
+          { groupSize: "5 people", price: "$500/person" },
+          { groupSize: "6 people", price: "$500/person" },
         ],
       },
     ],
@@ -305,8 +295,8 @@ export const safariPackages: SafariPackage[] = [
     duration: "2 Days / 1 Night",
     durationDays: 2,
     location: "Tarangire & Ngorongoro",
-    cardImage: "/images/safaris/tarangire-elephant-jeep.webp",
-    images: ["/images/safaris/tarangire-elephant-jeep.webp", "/images/safaris/tarangire-baobab.webp"],
+    cardImage: "/mtoto por images/new mtoto pot images/safari/ngorongoro.jpg",
+    images: ["/mtoto por images/new mtoto pot images/safari/ngorongoro.jpg", "/mtoto por images/new mtoto pot images/safari/tarangire.jpg"],
     summary:
       "Experience Tarangire National Park known for elephant herds and the UNESCO World Heritage Ngorongoro Crater.",
     description:
@@ -357,16 +347,6 @@ export const safariPackages: SafariPackage[] = [
           { groupSize: "6 people", price: "$950/person" },
         ],
       },
-      {
-        type: "Polish-Speaking Guide",
-        prices: [
-          { groupSize: "2 people", price: "$1,500/person" },
-          { groupSize: "3 people", price: "$1,250/person" },
-          { groupSize: "4 people", price: "$1,150/person" },
-          { groupSize: "5 people", price: "$1,100/person" },
-          { groupSize: "6 people", price: "$1,050/person" },
-        ],
-      },
     ],
     included: [
       "Transfer from/to airport",
@@ -393,8 +373,8 @@ export const safariPackages: SafariPackage[] = [
     duration: "3 Days / 2 Nights",
     durationDays: 3,
     location: "Serengeti, Tarangire & Ngorongoro",
-    cardImage: "/images/safaris/tarangire-baobab.webp",
-    images: ["/images/safaris/tarangire-baobab.webp", "/images/safaris/tarangire-elephant-jeep.webp"],
+    cardImage: "/mtoto por images/new mtoto pot images/packages/serengeti-safari.jpg",
+    images: ["/mtoto por images/new mtoto pot images/packages/serengeti-safari.jpg", "/mtoto por images/new mtoto pot images/safari/serengeti.jpg"],
     summary:
       "The ultimate 3-day safari experience covering Serengeti, Tarangire, and Ngorongoro - Tanzania's most iconic wildlife destinations.",
     description:
@@ -455,16 +435,6 @@ export const safariPackages: SafariPackage[] = [
           { groupSize: "6 people", price: "$1,500/person" },
         ],
       },
-      {
-        type: "Polish-Speaking Guide",
-        prices: [
-          { groupSize: "2 people", price: "$2,200/person" },
-          { groupSize: "3 people", price: "$1,900/person" },
-          { groupSize: "4 people", price: "$1,730/person" },
-          { groupSize: "5 people", price: "$1,675/person" },
-          { groupSize: "6 people", price: "$1,600/person" },
-        ],
-      },
     ],
     included: [
       "Airport transfer",
@@ -493,6 +463,88 @@ export const safariPackages: SafariPackage[] = [
       "Hippos",
       "Crocodiles",
     ],
+  },
+
+  // Gombe Kigoma Packages - Only 2 Day tour
+  {
+    id: "gombe-2-days-1-night",
+    slug: "gombe-2-days-1-night-chimpanzee-safari",
+    title: "Gombe 2 Days Chimpanzee Safari",
+    subtitle: "Chimpanzee Tracking in Gombe Stream",
+    duration: "2 Days / 1 Night",
+    durationDays: 2,
+    location: "Gombe Stream National Park, Kigoma",
+    cardImage: "/mtoto por images/gombe 1.jpg",
+    images: ["/mtoto por images/gombe 1.jpg", "/mtoto por images/gombe 2.jpg"],
+    summary:
+      "A memorable chimpanzee tracking experience in Gombe Stream National Park, home to the famous chimpanzees studied by Dr. Jane Goodall.",
+    description:
+      "Experience the magic of Gombe Stream National Park with this 2-day chimpanzee tracking adventure. Track wild chimpanzees through the forest, swim in the crystal-clear waters of Lake Tanganyika, and enjoy comfortable accommodation at either the rest house or luxury tent.",
+    highlights: [
+      "Two chimpanzee tracking sessions",
+      "Choice of Rest House or Luxury accommodation",
+      "Swimming in Lake Tanganyika",
+      "All meals included",
+      "Boat transfers included",
+      "Professional guides",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival & Chimpanzee Tracking",
+        activities: [
+          "10:30 AM - Pick up from hotel/lodge in Kigoma",
+          "Boat journey to Gombe (1 hour)",
+          "11:30 AM - Arrival and lunch",
+          "Start chimpanzee tracking until 5:00 PM",
+          "Swimming and relaxation",
+          "Overnight at Rest House or Luxury tent",
+        ],
+      },
+      {
+        day: 2,
+        title: "Morning Tracking & Departure",
+        activities: [
+          "Early breakfast",
+          "Morning chimpanzee tracking until 12:00 PM",
+          "Return for lunch",
+          "Swimming and relaxation",
+          "Boat back to Kigoma",
+        ],
+      },
+    ],
+    pricing: [
+      {
+        type: "Rest House",
+        prices: [
+          { groupSize: "East African Residents", price: "$300" },
+          { groupSize: "International Tourists", price: "$350" },
+        ],
+      },
+      {
+        type: "Luxury Tent",
+        prices: [
+          { groupSize: "East African Residents", price: "$325" },
+          { groupSize: "International Tourists", price: "$400" },
+        ],
+      },
+    ],
+    included: [
+      "Park entry fee",
+      "Chimpanzee tracking fee (2 days)",
+      "Accommodation (Rest House or Luxury)",
+      "All meals and water",
+      "Boat return transfers",
+      "Waiting charges",
+    ],
+    excluded: [
+      "Meals in Kigoma",
+      "Accommodation in Kigoma",
+      "Flights to/from Kigoma",
+      "Personal expenses",
+      "Tips for guides",
+    ],
+    wildlife: ["Chimpanzees", "Baboons", "Colobus Monkeys", "Over 200 bird species", "Butterflies"],
   },
 ]
 

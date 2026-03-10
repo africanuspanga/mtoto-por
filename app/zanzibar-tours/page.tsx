@@ -130,7 +130,7 @@ export default function ZanzibarToursPage() {
           <div className="max-w-3xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif text-white">{t("cta.title")}</h2>
-              <p className="text-white/80 mb-8">{t("cta.description")}</p>
+              <p className="text-white/80 mb-8">{t("cta.subtitle")}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
                   <Link href="/contact-us" onClick={() => window.scrollTo(0, 0)}>

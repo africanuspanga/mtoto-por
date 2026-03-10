@@ -11,9 +11,9 @@ import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/language-context"
 
 const vehicles = [
-  { name: "Toyota Alphard", capacityKey: "1 – 6", image: "/images/transfers/toyota-alphard.webp" },
-  { name: "Toyota Hiace", capacityKey: "8 – 16", image: "/images/transfers/toyota-hiace.webp" },
-  { name: "Coaster Bus", capacityKey: "15 – 28", image: "/images/transfers/toyota-coaster.webp" },
+  { name: "Toyota Alphard", capacityKey: "1 – 6", image: "/mtoto por images/new mtoto pot images/vehicles/alphard-white.png" },
+  { name: "Toyota Hiace", capacityKey: "8 – 16", image: "/mtoto por images/new mtoto pot images/vehicles/coaster-bus.jpg" },
+  { name: "Coaster Bus", capacityKey: "15 – 28", image: "/mtoto por images/new mtoto pot images/vehicles/coaster-22seat.avif" },
 ]
 
 const popularRoutes = [
@@ -222,7 +222,7 @@ export default function TransfersPage() {
             >
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/transfers/toyota-alphard.webp"
+                  src="/mtoto por images/new mtoto pot images/vehicles/alphard-white.png"
                   alt="24 Hour Taxi Service"
                   fill
                   className="object-cover"

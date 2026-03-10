@@ -7,16 +7,16 @@ import Link from "next/link"
 const partners = [
   {
     name: "TripAdvisor",
-    logo: "/images/tripadvisor.webp",
+    logo: "/mtoto por images/images/tripadvisor.webp",
     width: 140,
     height: 50,
     url: "https://www.tripadvisor.com/Attraction_Review-g666395-d26730809-Reviews-Zanzibar_Exclusive_Tours-Unguja_City_Zanzibar_Island_Zanzibar_Archipelago.html",
   },
-  { name: "Google Reviews", logo: "/images/google-reviews.png", width: 140, height: 60 },
-  { name: "Trustpilot", logo: "/images/trustpilot.png", width: 130, height: 50 },
-  { name: "GetYourGuide", logo: "/images/getyourguide.png", width: 80, height: 80 },
-  { name: "Safarigo", logo: "/images/safarigo.png", width: 130, height: 40 },
-  { name: "Tanzania Tourist Board", logo: "/images/tanzania-tourist-board.jpg", width: 100, height: 50 },
+  { name: "Google Reviews", logo: "/mtoto por images/images/google-reviews.png", width: 140, height: 60 },
+  { name: "Trustpilot", logo: "/mtoto por images/images/trustpilot.png", width: 130, height: 50 },
+  { name: "GetYourGuide", logo: "/mtoto por images/images/getyourguide.png", width: 80, height: 80 },
+  { name: "Safarigo", logo: "/mtoto por images/images/safarigo.png", width: 130, height: 40 },
+  { name: "Tanzania Tourist Board", logo: "/mtoto por images/images/tanzania-tourist-board.jpg", width: 100, height: 50 },
 ]
 
 export function RecommendedSection() {
