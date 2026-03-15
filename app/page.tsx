@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
@@ -13,6 +14,15 @@ import { RecommendedSection } from "@/components/recommended-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
+
+export const metadata: Metadata = {
+  title: "Mtoto Por Tours | Zanzibar Tours, Tanzania Safaris & Car Rental",
+  description:
+    "Book unforgettable Zanzibar tours, Tanzania safaris, and car rentals with Mtoto Por Tours. Stone Town, spice tours, Safari Blue, Serengeti, Ngorongoro & more. Trusted local tour operator since 2015.",
+  alternates: {
+    canonical: "https://www.mtotoportours.co.tz",
+  },
+}
 
 export default function HomePage() {
   return (
