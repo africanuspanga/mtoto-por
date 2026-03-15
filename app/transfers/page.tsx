@@ -83,7 +83,7 @@ export default function TransfersPage() {
                 className="border-white/30 text-white hover:bg-white/10 bg-transparent"
               >
                 <a
-                  href="https://api.whatsapp.com/send/?phone=255777411991&text=Hello%2C%20I%20would%20like%20to%20book%20a%20transfer&type=phone_number&app_absent=0"
+                  href="https://api.whatsapp.com/send/?phone=255717079200&text=Hello%2C%20I%20would%20like%20to%20book%20a%20transfer&type=phone_number&app_absent=0"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -236,7 +236,7 @@ export default function TransfersPage() {
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Call or WhatsApp</p>
-                        <p className="font-semibold text-foreground">+255 777 411 991</p>
+                        <p className="font-semibold text-foreground">+255 717 079 200</p>
                       </div>
                     </div>
                   </div>

@@ -17,7 +17,7 @@ export function TourCard({ tour, index }: TourCardProps) {
   const whatsappMessage = encodeURIComponent(
     `Hello! I'm interested in the ${tour.title}. Please send me more information.`,
   )
-  const whatsappUrl = `https://wa.me/255777411991?text=${whatsappMessage}`
+  const whatsappUrl = `https://wa.me/255717079200?text=${whatsappMessage}`
 
   return (
     <motion.div

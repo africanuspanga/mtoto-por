@@ -15,12 +15,12 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa"
 import { useLanguage } from "@/lib/language-context"
 
 const socialLinks = [
-  { name: "Facebook", icon: FaFacebookF, href: "https://www.facebook.com/ZanzibarExclusiveTours" },
-  { name: "Instagram", icon: FaInstagram, href: "https://www.instagram.com/zanzibarexclusivetours" },
+  { name: "Facebook", icon: FaFacebookF, href: "https://www.facebook.com/mtotopor" },
+  { name: "Instagram", icon: FaInstagram, href: "https://www.instagram.com/mtotopor" },
   {
     name: "WhatsApp",
     icon: FaWhatsapp,
-    href: "https://api.whatsapp.com/send/?phone=255777411991&text&type=phone_number&app_absent=0",
+    href: "https://api.whatsapp.com/send/?phone=255717079200&text&type=phone_number&app_absent=0",
   },
 ]
 
@@ -44,26 +44,26 @@ export default function ContactUsPage() {
     {
       icon: Phone,
       titleKey: "contactPage.phone",
-      details: ["+255 777 411 991", "+255 787 422 992"],
-      links: ["tel:+255777411991", "tel:+255787422992"],
+      details: ["+255 717 079 200"],
+      links: ["tel:+255717079200"],
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      details: ["+255 777 411 991"],
-      links: ["https://api.whatsapp.com/send/?phone=255777411991&text&type=phone_number&app_absent=0"],
+      details: ["+255 717 079 200"],
+      links: ["https://api.whatsapp.com/send/?phone=255717079200&text&type=phone_number&app_absent=0"],
     },
     {
       icon: Mail,
       titleKey: "contactPage.email",
-      details: ["info@zanzibarexclusivetours.com"],
-      links: ["mailto:info@zanzibarexclusivetours.com"],
+      details: ["mtotoportours@gmail.com"],
+      links: ["mailto:mtotoportours@gmail.com"],
     },
     {
       icon: Globe,
       title: "Website",
-      details: ["www.zanzibarexclusivetours.com"],
-      links: ["https://www.zanzibarexclusivetours.com"],
+      details: ["www.mtotopor.com"],
+      links: ["https://www.mtotopor.com"],
     },
     {
       icon: Clock,
@@ -77,7 +77,7 @@ export default function ContactUsPage() {
     setIsSubmitting(true)
 
     const message = `Hi! I'd like to get in touch.%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AMessage: ${formData.message}`
-    const whatsappUrl = `https://api.whatsapp.com/send/?phone=255777411991&text=${message}&type=phone_number&app_absent=0`
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=255717079200&text=${message}&type=phone_number&app_absent=0`
 
     await new Promise((resolve) => setTimeout(resolve, 500))
     window.open(whatsappUrl, "_blank")

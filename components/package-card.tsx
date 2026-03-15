@@ -13,7 +13,7 @@ interface PackageCardProps {
 }
 
 export function PackageCard({ pkg, index }: PackageCardProps) {
-  const whatsappNumber = "255777411991"
+  const whatsappNumber = "255717079200"
   const whatsappMessage = encodeURIComponent(
     `Hi! I'm interested in the ${pkg.title}. Can you provide more information?`,
   )

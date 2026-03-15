@@ -89,11 +89,11 @@ export function CTASection() {
             </a>
             <span className="hidden sm:block text-white/30">|</span>
             <a
-              href="mailto:amtopwa@yahoo.com"
+              href="mailto:mtotoportours@gmail.com"
               className="flex items-center gap-2 hover:text-[#f7c43c] transition-colors"
             >
               <Mail className="h-5 w-5" />
-              <span className="font-body">amtopwa@yahoo.com</span>
+              <span className="font-body">mtotoportours@gmail.com</span>
             </a>
           </motion.div>
         </div>

@@ -3,9 +3,9 @@ import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 
 export const metadata = {
-  title: "Privacy Policy | Zanzibar Exclusive Tours & Safaris",
+  title: "Privacy Policy | Mtoto Por Tours",
   description:
-    "Privacy Policy for Zanzibar Exclusive Tours & Safaris - Learn how we protect your personal information.",
+    "Privacy Policy for Mtoto Por Tours - Learn how we protect your personal information.",
 }
 
 export default function PrivacyPage() {
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
           <div className="prose prose-lg max-w-none font-body">
             <h2 className="font-display text-2xl font-bold text-foreground mb-4">1. Introduction</h2>
             <p className="text-muted-foreground mb-6">
-              Welcome to Zanzibar Exclusive Tours & Safaris. We respect your privacy and are committed to protecting
+              Welcome to Mtoto Por Tours. We respect your privacy and are committed to protecting
               your personal data. This privacy policy will inform you about how we look after your personal data when
               you visit our website and tell you about your privacy rights.
             </p>
@@ -95,10 +95,10 @@ export default function PrivacyPage() {
             </p>
             <ul className="list-none text-muted-foreground mb-6 space-y-2">
               <li>
-                <strong>Email:</strong> info@zanzibarexclusivetours.com
+                <strong>Email:</strong> mtotoportours@gmail.com
               </li>
               <li>
-                <strong>Phone:</strong> +255 777 411 991
+                <strong>Phone:</strong> +255 717 079 200
               </li>
               <li>
                 <strong>Address:</strong> Jumbi - Zanzibar, P.O.Box 2731, Tanzania

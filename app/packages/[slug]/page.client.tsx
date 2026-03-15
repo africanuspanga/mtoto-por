@@ -22,7 +22,7 @@ export function PackageDetailPageClient() {
     notFound()
   }
 
-  const whatsappNumber = "255777411991"
+  const whatsappNumber = "255717079200"
   const whatsappMessage = encodeURIComponent(
     `Hi! I'm interested in booking the ${pkg.title}. Can you provide more details and availability?`,
   )
@@ -297,18 +297,18 @@ export function PackageDetailPageClient() {
                   <p className="text-sm text-muted-foreground font-body mb-3">Need help or have questions?</p>
                   <div className="space-y-2">
                     <a
-                      href="tel:+255777411991"
+                      href="tel:+255717079200"
                       className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
                     >
                       <MapPin className="h-4 w-4" />
-                      +255 777 411 991
+                      +255 717 079 200
                     </a>
                     <a
-                      href="mailto:info@zanzibarexclusivetours.com"
+                      href="mailto:mtotoportours@gmail.com"
                       className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors break-all"
                     >
                       <span className="text-primary">@</span>
-                      info@zanzibarexclusivetours.com
+                      mtotoportours@gmail.com
                     </a>
                   </div>
                 </div>

@@ -81,7 +81,7 @@ export const packagesData: PackageData[] = [
       "Immerse yourself in Zanzibar's culture with Stone Town Tour, Sunset Dhow Cruise, aromatic Spice Farm visit, and Prison Island adventure with giant tortoises.",
     overview:
       "Welcome to The Spice Islands Of Zanzibar! This 3-day package offers the perfect introduction to Zanzibar's rich history and natural beauty. Stay in a charming Stone Town hotel while exploring historical sites, cruising at sunset on a traditional dhow, visiting aromatic spice farms, and meeting the famous Aldabra Giant Tortoises at Prison Island.",
-    accommodationTown: ["Tembo Hotel", "Dhow Palace", "Zanzibar Serena", "Mizingani Seafront"],
+    accommodationTown: ["Ngalawa Beach Resort", "Dhow Palace", "Zanzibar Serena", "Mizingani Seafront"],
     accommodationBeach: [],
     itinerary: [
       {
@@ -104,7 +104,7 @@ export const packagesData: PackageData[] = [
       },
     ],
     included: [
-      "Accommodation at 4-star hotel (Tembo, Dhow Palace or similar) - 2 nights B&B",
+      "Accommodation at 4-star hotel (Ngalawa Beach Resort, Dhow Palace or similar) - 2 nights B&B",
       "Airport/Seaport transfers",
       "Stone Town Walking Tour",
       "Sunset Dhow Cruise",

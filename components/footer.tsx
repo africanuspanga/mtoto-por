@@ -137,11 +137,8 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-[#f7c43c] flex-shrink-0" />
                 <div className="text-white/70 font-body space-y-1">
-                  <a href="mailto:amtopwa@yahoo.com" className="hover:text-[#f7c43c] transition-colors block">
-                    amtopwa@yahoo.com
-                  </a>
-                  <a href="mailto:mtopwaabou@gmail.com" className="hover:text-[#f7c43c] transition-colors block">
-                    mtopwaabou@gmail.com
+                  <a href="mailto:mtotoportours@gmail.com" className="hover:text-[#f7c43c] transition-colors block">
+                    mtotoportours@gmail.com
                   </a>
                 </div>
               </li>

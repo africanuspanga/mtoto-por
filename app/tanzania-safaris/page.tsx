@@ -167,7 +167,7 @@ export default function TanzaniaSafarisPage() {
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent" asChild>
                 <a
-                  href="https://wa.me/255777411991?text=Hello!%20I'm%20interested%20in%20a%20custom%20safari%20package.%20Please%20help%20me%20plan%20my%20adventure."
+                  href="https://wa.me/255717079200?text=Hello!%20I'm%20interested%20in%20a%20custom%20safari%20package.%20Please%20help%20me%20plan%20my%20adventure."
                   target="_blank"
                   rel="noopener noreferrer"
                 >

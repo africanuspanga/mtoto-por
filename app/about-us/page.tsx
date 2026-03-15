@@ -200,7 +200,7 @@ export default function AboutUsPage() {
                   {t("cta.button")}
                 </a>
                 <a
-                  href="https://wa.me/255777411991"
+                  href="https://wa.me/255717079200"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/50 hover:bg-white/10 text-white font-semibold rounded-lg transition-colors"

@@ -305,11 +305,11 @@ export function SafariDetailPageClient() {
                           <span>+255 717 079200</span>
                         </a>
                         <a
-                          href="mailto:amtopwa@yahoo.com"
+                          href="mailto:mtotoportours@gmail.com"
                           className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                         >
                           <Mail className="w-5 h-5 text-primary" />
-                          <span className="text-sm">amtopwa@yahoo.com</span>
+                          <span className="text-sm">mtotoportours@gmail.com</span>
                         </a>
                       </div>
                     </CardContent>

@@ -42,7 +42,7 @@ export function TourDetailPageClient() {
   const whatsappMessage = encodeURIComponent(
     `Hello! I'm interested in booking the ${tour.title}. Please send me more information.`,
   )
-  const whatsappUrl = `https://wa.me/255777411991?text=${whatsappMessage}`
+  const whatsappUrl = `https://wa.me/255717079200?text=${whatsappMessage}`
 
   return (
     <main className="min-h-screen bg-background">
@@ -262,7 +262,7 @@ export function TourDetailPageClient() {
                         </Button>
 
                         <Button asChild variant="ghost" className="w-full" size="lg">
-                          <a href="tel:+255777411991">
+                          <a href="tel:+255717079200">
                             <Phone className="w-5 h-5 mr-2" />
                             Call Us
                           </a>
@@ -279,7 +279,7 @@ export function TourDetailPageClient() {
                     <p className="text-sm text-muted-foreground mb-4">
                       Our travel experts are here to assist you with any questions.
                     </p>
-                    <p className="font-semibold text-primary">+255 777 411 991</p>
+                    <p className="font-semibold text-primary">+255 717 079 200</p>
                     <p className="text-sm text-muted-foreground">Mon-Sat: 8AM - 5PM</p>
                   </CardContent>
                 </Card>

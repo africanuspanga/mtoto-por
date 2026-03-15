@@ -144,7 +144,7 @@ export default function ZanzibarToursPage() {
                   className="border-white text-white hover:bg-white hover:text-black bg-transparent"
                 >
                   <a
-                    href="https://wa.me/255777411991?text=Hello! I'm interested in a custom tour package."
+                    href="https://wa.me/255717079200?text=Hello! I'm interested in a custom tour package."
                     target="_blank"
                     rel="noopener noreferrer"
                   >

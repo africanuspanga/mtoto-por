@@ -250,7 +250,7 @@ export default function FAQsPage() {
                 className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-6 text-lg bg-transparent"
               >
                 <a
-                  href="https://api.whatsapp.com/send/?phone=255777411991&text=Hello! I have a question about booking a tour."
+                  href="https://api.whatsapp.com/send/?phone=255717079200&text=Hello! I have a question about booking a tour."
                   target="_blank"
                   rel="noopener noreferrer"
                 >

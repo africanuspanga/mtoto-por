@@ -38,11 +38,11 @@ export function TopBar() {
             </a>
             <span className="text-white/40">|</span>
             <a
-              href="mailto:amtopwa@yahoo.com"
+              href="mailto:mtotoportours@gmail.com"
               className="flex items-center gap-2 hover:text-[#f7c43c] transition-colors"
             >
               <Mail className="h-3.5 w-3.5" />
-              <span>amtopwa@yahoo.com</span>
+              <span>mtotoportours@gmail.com</span>
             </a>
           </div>
 

@@ -69,7 +69,7 @@ export const safariPackages: SafariPackage[] = [
       {
         type: "Standard",
         prices: [
-          { groupSize: "Adult", price: "$450" },
+          { groupSize: "Adult", price: "$500" },
           { groupSize: "Child (up to 11 years)", price: "$400" },
         ],
       },
@@ -192,7 +192,7 @@ export const safariPackages: SafariPackage[] = [
       {
         type: "Standard",
         prices: [
-          { groupSize: "Adult", price: "$750" },
+          { groupSize: "Adult", price: "$800" },
           { groupSize: "Child (under 12 with two adults)", price: "$600" },
         ],
       },
@@ -262,11 +262,11 @@ export const safariPackages: SafariPackage[] = [
       {
         type: "English-Speaking Guide",
         prices: [
-          { groupSize: "2 people", price: "$500/person" },
-          { groupSize: "3 people", price: "$500/person" },
-          { groupSize: "4 people", price: "$500/person" },
-          { groupSize: "5 people", price: "$500/person" },
-          { groupSize: "6 people", price: "$500/person" },
+          { groupSize: "2 people", price: "$800/person" },
+          { groupSize: "3 people", price: "$800/person" },
+          { groupSize: "4 people", price: "$800/person" },
+          { groupSize: "5 people", price: "$800/person" },
+          { groupSize: "6 people", price: "$800/person" },
         ],
       },
     ],
@@ -340,11 +340,7 @@ export const safariPackages: SafariPackage[] = [
       {
         type: "English-Speaking Guide",
         prices: [
-          { groupSize: "2 people", price: "$1,300/person" },
-          { groupSize: "3 people", price: "$1,100/person" },
-          { groupSize: "4 people", price: "$1,050/person" },
-          { groupSize: "5 people", price: "$1,000/person" },
-          { groupSize: "6 people", price: "$950/person" },
+          { groupSize: "Per Person", price: "$2,000" },
         ],
       },
     ],
@@ -465,6 +461,124 @@ export const safariPackages: SafariPackage[] = [
     ],
   },
 
+  // 6 Days Safari Package
+  {
+    id: "6-days-tarangire-serengeti-ngorongoro-manyara",
+    slug: "6-days-tarangire-serengeti-ngorongoro-manyara-safari",
+    title: "6 Days Tarangire, Serengeti, Ngorongoro & Manyara Safari",
+    subtitle: "Ultimate Northern Circuit Safari Experience",
+    duration: "6 Days / 5 Nights",
+    durationDays: 6,
+    location: "Tarangire, Serengeti, Ngorongoro & Manyara",
+    cardImage: "/mtoto por images/new mtoto pot images/safari/serengeti.jpg",
+    images: ["/mtoto por images/new mtoto pot images/safari/serengeti.jpg", "/mtoto por images/new mtoto pot images/safari/ngorongoro.jpg", "/mtoto por images/new mtoto pot images/safari/tarangire.jpg"],
+    summary:
+      "The ultimate 6-day safari adventure covering all four iconic northern circuit parks: Tarangire, Serengeti, Ngorongoro Crater, and Lake Manyara.",
+    description:
+      "Experience the best of Tanzania's northern safari circuit on this comprehensive 6-day adventure. From the elephant herds of Tarangire to the endless plains of Serengeti, the wildlife-rich Ngorongoro Crater, and the tree-climbing lions of Lake Manyara, this safari offers unparalleled wildlife viewing opportunities.",
+    highlights: [
+      "Visit all four iconic northern circuit parks",
+      "Witness the Big Five in their natural habitat",
+      "Sunrise game drives in Serengeti",
+      "Full-day Ngorongoro Crater exploration",
+      "Luxury lodge and tented camp accommodation",
+      "Professional English-speaking guide throughout",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Arusha to Tarangire National Park",
+        activities: [
+          "Early morning pickup from Arusha airport",
+          "Drive to Tarangire National Park (2 hours)",
+          "Full-day game drive with picnic lunch",
+          "Spot large elephant herds and baobab trees",
+          "Dinner and overnight at Tarangire Safari Lodge",
+        ],
+      },
+      {
+        day: 2,
+        title: "Tarangire to Serengeti National Park",
+        activities: [
+          "Early morning game drive in Tarangire",
+          "Drive to Serengeti National Park via Ngorongoro",
+          "En-route game drive through the plains",
+          "Dinner and overnight at Serengeti luxury camp",
+        ],
+      },
+      {
+        day: 3,
+        title: "Full Day Serengeti Safari",
+        activities: [
+          "Sunrise game drive in Serengeti",
+          "Search for the Big Five and great migration",
+          "Picnic lunch in the bush",
+          "Afternoon game drive",
+          "Dinner and overnight at luxury tented camp",
+        ],
+      },
+      {
+        day: 4,
+        title: "Serengeti to Ngorongoro Crater",
+        activities: [
+          "Morning game drive in Serengeti",
+          "Drive to Ngorongoro Conservation Area",
+          "Scenic views from the crater rim",
+          "Dinner and overnight at Ngorongoro lodge",
+        ],
+      },
+      {
+        day: 5,
+        title: "Ngorongoro Crater Safari",
+        activities: [
+          "Early descent into Ngorongoro Crater",
+          "Full-day game drive on the crater floor",
+          "Picnic lunch near the hippo pool",
+          "Search for rhinos, lions, and flamingos",
+          "Dinner and overnight at Ngorongoro lodge",
+        ],
+      },
+      {
+        day: 6,
+        title: "Lake Manyara & Return to Arusha",
+        activities: [
+          "Morning drive to Lake Manyara National Park",
+          "Game drive to spot tree-climbing lions",
+          "Visit the alkaline lake with flamingos",
+          "Lunch at the park",
+          "Drive back to Arusha for departure",
+        ],
+      },
+    ],
+    pricing: [
+      {
+        type: "English-Speaking Guide",
+        prices: [
+          { groupSize: "Per Person", price: "$2,500" },
+        ],
+      },
+    ],
+    included: [
+      "All park fees and concession fees",
+      "Private 4x4 safari vehicle with pop-up roof",
+      "Professional English-speaking guide",
+      "5 nights accommodation at luxury lodges/camps",
+      "All meals during safari",
+      "Airport transfers",
+      "Bottled water during game drives",
+      "All government taxes",
+    ],
+    excluded: [
+      "International flights",
+      "Visa fees",
+      "Travel insurance",
+      "Alcoholic beverages",
+      "Tips for guide and staff",
+      "Personal expenses",
+    ],
+    wildlife: ["Lions", "Elephants", "Leopards", "Rhinos", "Buffalos", "Cheetahs", "Wildebeest", "Zebras", "Giraffes", "Hippos", "Flamingos"],
+  },
+
   // Gombe Kigoma Packages - Only 2 Day tour
   {
     id: "gombe-2-days-1-night",
@@ -515,17 +629,9 @@ export const safariPackages: SafariPackage[] = [
     ],
     pricing: [
       {
-        type: "Rest House",
+        type: "Standard",
         prices: [
-          { groupSize: "East African Residents", price: "$300" },
-          { groupSize: "International Tourists", price: "$350" },
-        ],
-      },
-      {
-        type: "Luxury Tent",
-        prices: [
-          { groupSize: "East African Residents", price: "$325" },
-          { groupSize: "International Tourists", price: "$400" },
+          { groupSize: "Per Person", price: "$600" },
         ],
       },
     ],

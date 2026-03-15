@@ -96,7 +96,7 @@ export default function PackagesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/255777411991?text=Hi!%20I'm%20interested%20in%20a%20custom%20Zanzibar%20package.%20Can%20you%20help%20me%20plan%20my%20trip?"
+                href="https://wa.me/255717079200?text=Hi!%20I'm%20interested%20in%20a%20custom%20Zanzibar%20package.%20Can%20you%20help%20me%20plan%20my%20trip?"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -107,7 +107,7 @@ export default function PackagesPage() {
                   Chat on WhatsApp
                 </button>
               </a>
-              <a href="mailto:info@zanzibarexclusivetours.com">
+              <a href="mailto:mtotoportours@gmail.com">
                 <button className="px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full transition-colors">
                   Email Us
                 </button>
