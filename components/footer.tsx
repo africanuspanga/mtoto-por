@@ -164,18 +164,11 @@ export function Footer() {
             <p className="text-white/70 text-sm font-body">We Accept</p>
             <div className="flex items-center gap-4">
               <Image
-                src="/mtoto por images/new mtoto pot images/payment/visa-logo.png"
-                alt="Visa"
-                width={60}
-                height={40}
-                className="h-10 w-auto bg-white rounded px-2 py-1"
-              />
-              <Image
-                src="/mtoto por images/new mtoto pot images/payment/unionpay-logo.png"
-                alt="UnionPay"
-                width={60}
-                height={40}
-                className="h-10 w-auto bg-white rounded px-2 py-1"
+                src="/mtoto por images/images/payment-methods.webp"
+                alt="We accept Visa, MasterCard, and American Express"
+                width={300}
+                height={70}
+                className="h-12 w-auto"
               />
             </div>
           </div>
