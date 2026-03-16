@@ -71,7 +71,7 @@ export function SafarisSection() {
                     
                     <div className="absolute top-4 right-4">
                       <span className="bg-[#f7c43c] text-[#1e3f23] text-sm font-bold px-3 py-1 rounded-full">
-                        {safari.pricing[0]?.prices[0]?.price || "Contact Us"}
+                        From {safari.pricing[0]?.prices[0]?.price || "Contact Us"}
                       </span>
                     </div>
                     <div className="absolute bottom-4 left-4 right-4">
