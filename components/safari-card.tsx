@@ -19,8 +19,8 @@ export function SafariCard({ safari, index }: SafariCardProps) {
   )
   const whatsappUrl = `https://wa.me/255717079200?text=${whatsappMessage}`
 
-  // Get the starting price
-  const startingPrice = safari.pricing[0]?.prices[safari.pricing[0].prices.length - 1]?.price || "Contact for price"
+  // Get the starting price (Adult price is now first)
+  const startingPrice = safari.pricing[0]?.prices[0]?.price || "Contact for price"
 
   return (
     <motion.div

@@ -221,7 +221,7 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en" className={`${montserrat.variable} ${openSans.variable}`}>
+    <html lang="en" className={`${montserrat.variable} ${openSans.variable} overflow-x-hidden`}>
       <head>
         <script
           type="application/ld+json"

@@ -69,8 +69,8 @@ export const safariPackages: SafariPackage[] = [
       {
         type: "Standard",
         prices: [
-          { groupSize: "Child (up to 11 years)", price: "$400" },
           { groupSize: "Adult", price: "$500" },
+          { groupSize: "Child (up to 11 years)", price: "$400" },
         ],
       },
     ],
@@ -124,8 +124,8 @@ export const safariPackages: SafariPackage[] = [
       {
         type: "Standard",
         prices: [
-          { groupSize: "Child (up to 11 years)", price: "$400" },
           { groupSize: "Adult", price: "$500" },
+          { groupSize: "Child (up to 11 years)", price: "$400" },
         ],
       },
     ],
