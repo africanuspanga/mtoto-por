@@ -632,19 +632,21 @@ export const safariPackages: SafariPackage[] = [
       {
         type: "Standard Package",
         prices: [
-          { groupSize: "Per Person", price: "$600" },
+          { groupSize: "Per Person", price: "$800" },
         ],
       },
     ],
     included: [
       "Entry fee",
-      "Chimpanzee tracking fee (2 days)",
-      "All meals and water",
-      "Accommodation (Rest House or Luxury)",
-      "Boat two way and waiting charges",
+      "Tracking fee two days",
+      "Meal and water",
+      "Rest house: $300 (residents) / $350 (tourists)",
+      "Luxury: $325 (residents) / $400 (tourists)",
+      "Rest house accommodation",
+      "Boat two way and waiting charge",
     ],
     excluded: [
-      "Meals in Kigoma",
+      "Meal Kigoma",
       "Accommodation in Kigoma",
       "Flights to/from Kigoma",
       "Personal expenses",
