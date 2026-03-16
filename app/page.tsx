@@ -9,6 +9,7 @@ import { SafarisSection } from "@/components/homepage/safaris-section"
 import { PackagesSection } from "@/components/homepage/packages-section"
 import { QuadBikingSection } from "@/components/homepage/quad-biking-section"
 import { TransfersSection } from "@/components/homepage/transfers-section"
+import { ZanzibarMultiDaySection } from "@/components/homepage/zanzibar-multi-day-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { RecommendedSection } from "@/components/recommended-section"
 import { CTASection } from "@/components/cta-section"
@@ -34,6 +35,7 @@ export default function HomePage() {
       <FullDayToursSection />
       <HalfDayToursSection />
       <SafarisSection />
+      <ZanzibarMultiDaySection />
       <PackagesSection />
       <QuadBikingSection />
       <TransfersSection />

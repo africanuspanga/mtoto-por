@@ -46,7 +46,7 @@ export const safariPackages: SafariPackage[] = [
     highlights: [
       "Largest nature reserve in Africa",
       "Just 1 hour flight from Zanzibar",
-      "Professional English-speaking guide",
+      "Professional multilingual guide (English, Spanish, French, German)",
       "Lunch box included",
     ],
     itinerary: [
@@ -78,7 +78,7 @@ export const safariPackages: SafariPackage[] = [
       "Transfer from/to the airport",
       "Flight Zanzibar – Selous – Zanzibar",
       "Entry to Selous National Park",
-      "Safari car with English-speaking driver and guide",
+      "Safari car with multilingual driver and guide (English, Spanish, French, German)",
       "Lunch box",
     ],
     excluded: ["Alcoholic beverages", "Tips for driver/guide", "Personal expenses"],
@@ -102,7 +102,7 @@ export const safariPackages: SafariPackage[] = [
       "Fourth largest National Park in Tanzania",
       "3,230 km² of wilderness",
       "Just 1 hour flight from Zanzibar",
-      "Professional English-speaking guide",
+      "Professional multilingual guide (English, Spanish, French, German)",
     ],
     itinerary: [
       {
@@ -133,7 +133,7 @@ export const safariPackages: SafariPackage[] = [
       "Transfer from/to the airport",
       "Flight Zanzibar – Mikumi – Zanzibar",
       "Entry to Mikumi National Park",
-      "Safari car with English-speaking driver and guide",
+      "Safari car with multilingual driver and guide (English, Spanish, French, German)",
       "Lunch box",
     ],
     excluded: ["Alcoholic beverages", "Tips for driver/guide", "Personal expenses"],
@@ -482,7 +482,7 @@ export const safariPackages: SafariPackage[] = [
       "Sunrise game drives in Serengeti",
       "Full-day Ngorongoro Crater exploration",
       "Luxury lodge and tented camp accommodation",
-      "Professional English-speaking guide throughout",
+      "Professional multilingual guide throughout (English, Spanish, French, German)",
     ],
     itinerary: [
       {
@@ -561,7 +561,7 @@ export const safariPackages: SafariPackage[] = [
     included: [
       "All park fees and concession fees",
       "Private 4x4 safari vehicle with pop-up roof",
-      "Professional English-speaking guide",
+      "Professional multilingual guide (English, Spanish, French, German)",
       "5 nights accommodation at luxury lodges/camps",
       "All meals during safari",
       "Airport transfers",
@@ -608,11 +608,12 @@ export const safariPackages: SafariPackage[] = [
         title: "Arrival & Chimpanzee Tracking",
         activities: [
           "10:30 AM - Pick up from hotel/lodge in Kigoma",
-          "Boat journey to Gombe (1 hour)",
-          "11:30 AM - Arrival and lunch",
+          "Take the boat for 1 hour to Gombe",
+          "11:30 AM - Arrival at Gombe",
+          "Lunch upon arrival",
           "Start chimpanzee tracking until 5:00 PM",
           "Swimming and relaxation",
-          "Overnight at Rest House or Luxury tent",
+          "Overnight at Rest House or Luxury accommodation",
         ],
       },
       {
@@ -620,7 +621,7 @@ export const safariPackages: SafariPackage[] = [
         title: "Morning Tracking & Departure",
         activities: [
           "Early breakfast",
-          "Morning chimpanzee tracking until 12:00 PM",
+          "Chimpanzee tracking until 12:00 PM",
           "Return for lunch",
           "Swimming and relaxation",
           "Boat back to Kigoma",
@@ -629,19 +630,26 @@ export const safariPackages: SafariPackage[] = [
     ],
     pricing: [
       {
-        type: "Standard",
+        type: "Rest House",
         prices: [
-          { groupSize: "Per Person", price: "$600" },
+          { groupSize: "Residents", price: "$300" },
+          { groupSize: "Tourists", price: "$350" },
+        ],
+      },
+      {
+        type: "Luxury",
+        prices: [
+          { groupSize: "Residents", price: "$325" },
+          { groupSize: "Tourists", price: "$400" },
         ],
       },
     ],
     included: [
-      "Park entry fee",
+      "Entry fee",
       "Chimpanzee tracking fee (2 days)",
-      "Accommodation (Rest House or Luxury)",
       "All meals and water",
-      "Boat return transfers",
-      "Waiting charges",
+      "Accommodation (Rest House or Luxury)",
+      "Boat two way and waiting charges",
     ],
     excluded: [
       "Meals in Kigoma",

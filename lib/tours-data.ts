@@ -4,7 +4,7 @@ export interface ZanzibarTour {
   title: string
   subtitle: string
   duration: string
-  category: "full-day" | "half-day" | "multi-day"
+  category: "full-day" | "half-day" | "multi-day" | "featured"
   cardImage: string
   heroImage: string
   galleryImages: string[]
@@ -607,10 +607,68 @@ export const zanzibarTours: ZanzibarTour[] = [
     excluded: ["Lunch", "Tips for guide", "Personal expenses", "Souvenirs"],
     tags: ["History", "Culture", "UNESCO", "Architecture", "Walking Tour"],
   },
+
+  // Multi-day tours
+  {
+    id: "explore-zanzibar-7days",
+    slug: "explore-zanzibar-7-days-6-nights",
+    title: "Explore Zanzibar",
+    subtitle: "7 Days 6 Nights Ultimate Island Experience",
+    duration: "7 Days / 6 Nights",
+    category: "multi-day",
+    cardImage: "/mtoto por images/explore-zanzibar-7days.jpg",
+    heroImage: "/mtoto por images/explore-zanzibar-7days.jpg",
+    galleryImages: [
+      "/mtoto por images/explore-zanzibar-7days.jpg",
+      "/mtoto por images/images/tours/prison-island-tortoise.webp",
+      "/mtoto por images/images/tours/nakupenda-sandbank.webp",
+      "/mtoto por images/images/tours/jozani-forest.webp",
+      "/mtoto por images/images/tours/safari-blue-sandbank-aerial.webp",
+      "/mtoto por images/images/tours/spice-farm.webp",
+    ],
+    summary:
+      "Experience the ultimate Zanzibar adventure with our 7-day package. From Prison Island to Jozani Forest, Blue Safari to Sunset Cruises - discover everything this paradise island has to offer.",
+    description:
+      "Let's explore Zanzibar with our comprehensive 7 Days 6 Nights package. This ultimate island experience combines history, nature, adventure, and relaxation. Visit Prison Island with giant tortoises, explore historic Stone Town, relax at Nakupenda Sandbank, enjoy the famous Safari Blue ocean adventure, discover Jozani Forest's red colobus monkeys, and experience magical sunset dhow cruises. With luxury accommodation options and all-inclusive convenience, this is the perfect way to experience the best of Zanzibar.",
+    highlights: [
+      "Arrival welcome and transfer to your hotel",
+      "Prison Island visit with giant tortoises",
+      "Historic Stone Town walking tour",
+      "Nakupenda Sandbank swimming and snorkeling",
+      "Full-day Safari Blue ocean adventure",
+      "Jozani Forest red colobus monkey encounter",
+      "Salam Cave swimming with turtles",
+      "Authentic village tour experience",
+      "Romantic sunset dhow cruise",
+      "Aromatic spice farm tour",
+      "6 nights accommodation with breakfast",
+      "All entrance fees and government taxes included",
+    ],
+    included: [
+      "Luxury transport throughout the tour",
+      "All entrance fees to attractions",
+      "Professional multilingual tour guide (English, Spanish, French, German)",
+      "Fresh tropical fruits & soft drinks",
+      "All boat transfers and activities",
+      "6 nights accommodation with breakfast",
+      "All government fees and taxes",
+    ],
+    excluded: [
+      "International flights to/from Zanzibar",
+      "Lunch and dinner (unless specified)",
+      "Alcoholic beverages",
+      "Tips for guides and drivers",
+      "Personal expenses and souvenirs",
+      "Travel insurance",
+    ],
+    tags: ["Multi-Day", "All-Inclusive", "Luxury", "Adventure", "Beach", "Wildlife", "Culture"],
+  },
 ]
 
 export const getFullDayTours = () => zanzibarTours.filter((tour) => tour.category === "full-day")
 export const getHalfDayTours = () => zanzibarTours.filter((tour) => tour.category === "half-day")
+export const getMultiDayTours = () => zanzibarTours.filter((tour) => tour.category === "multi-day")
+export const getFeaturedTours = () => zanzibarTours.filter((tour) => tour.category === "featured" || tour.slug === "explore-zanzibar-7-days-6-nights")
 export const getTourBySlug = (slug: string) => zanzibarTours.find((tour) => tour.slug === slug)
 
 export const getRelatedTours = (currentSlug: string, limit = 3) => {

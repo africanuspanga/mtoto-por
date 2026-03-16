@@ -62,8 +62,8 @@ export default function ContactUsPage() {
     {
       icon: Globe,
       title: "Website",
-      details: ["www.mtotopor.com"],
-      links: ["https://www.mtotopor.com"],
+      details: ["www.mtotoportours.co.tz"],
+      links: ["https://www.mtotoportours.co.tz"],
     },
     {
       icon: Clock,

@@ -14,7 +14,7 @@ const features = [
   {
     icon: Compass,
     title: "Expert Guides",
-    description: "Professional English speaking guides",
+    description: "Professional multilingual guides (English, Spanish, French, German)",
   },
   {
     icon: TreePine,

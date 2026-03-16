@@ -3,6 +3,9 @@ import { safariPackages } from "@/lib/safaris-data"
 import { zanzibarTours } from "@/lib/tours-data"
 import { packagesData } from "@/lib/packages-data"
 
+// Force static generation for export
+export const dynamic = "force-static"
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.mtotoportours.co.tz"
   
