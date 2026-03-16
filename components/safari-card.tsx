@@ -19,8 +19,25 @@ export function SafariCard({ safari, index }: SafariCardProps) {
   )
   const whatsappUrl = `https://wa.me/255717079200?text=${whatsappMessage}`
 
-  // Get the starting price (Adult price is now first)
-  const startingPrice = safari.pricing[0]?.prices[0]?.price || "Contact for price"
+  // Get the minimum starting price across all pricing tiers
+  const getStartingPrice = () => {
+    if (!safari.pricing || safari.pricing.length === 0) return "Contact for price"
+    
+    let minPrice = Infinity
+    safari.pricing.forEach((tier) => {
+      tier.prices.forEach((p) => {
+        // Extract numeric value from price string (e.g., "$500" -> 500)
+        const numericPrice = parseInt(p.price.replace(/[^0-9]/g, ""))
+        if (numericPrice && numericPrice < minPrice) {
+          minPrice = numericPrice
+        }
+      })
+    })
+    
+    return minPrice === Infinity ? "Contact for price" : `$${minPrice}`
+  }
+  
+  const startingPrice = getStartingPrice()
 
   return (
     <motion.div

@@ -49,14 +49,15 @@ export function SafariDetailPageClient() {
         </div>
 
         {/* Back Button */}
-        <Link
-          href="/tanzania-safaris"
-          onClick={() => window.scrollTo(0, 0)}
-          className="absolute top-24 left-4 sm:left-8 z-20 flex items-center gap-2 text-white hover:text-primary transition-colors bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm"
+        <button
+          onClick={() => {
+            window.location.href = "/tanzania-safaris"
+          }}
+          className="absolute top-24 left-4 sm:left-8 z-20 flex items-center gap-2 text-white hover:text-primary transition-colors bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm cursor-pointer"
         >
           <ArrowLeft className="w-5 h-5" />
           <span className="hidden sm:inline">Back to Safaris</span>
-        </Link>
+        </button>
 
         {/* Hero Content */}
         <div className="relative z-10 container mx-auto px-4 pb-8 sm:pb-12">
@@ -270,7 +271,7 @@ export function SafariDetailPageClient() {
                       <div className="text-center pb-4 border-b">
                         <span className="text-sm text-muted-foreground">Starting from</span>
                         <p className="text-3xl font-bold text-foreground">
-                          {safari.pricing[0]?.prices[safari.pricing[0].prices.length - 1]?.price || "Contact us"}
+                          {safari.pricing[0]?.prices[0]?.price || "Contact us"}
                         </p>
                         <span className="text-sm text-muted-foreground">per person</span>
                       </div>

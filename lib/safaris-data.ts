@@ -630,17 +630,9 @@ export const safariPackages: SafariPackage[] = [
     ],
     pricing: [
       {
-        type: "Rest House",
+        type: "Standard Package",
         prices: [
-          { groupSize: "Residents", price: "$300" },
-          { groupSize: "Tourists", price: "$350" },
-        ],
-      },
-      {
-        type: "Luxury",
-        prices: [
-          { groupSize: "Residents", price: "$325" },
-          { groupSize: "Tourists", price: "$400" },
+          { groupSize: "Per Person", price: "$600" },
         ],
       },
     ],
