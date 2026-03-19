@@ -19,8 +19,13 @@ export function SafariCard({ safari, index }: SafariCardProps) {
   )
   const whatsappUrl = `https://wa.me/255717079200?text=${whatsappMessage}`
 
-  // Get the minimum starting price across all pricing tiers
+  // Get the display price - use displayPrice if set, otherwise fall back to minimum price
   const getStartingPrice = () => {
+    // If displayPrice is explicitly set, use it
+    if ((safari as any).displayPrice) {
+      return (safari as any).displayPrice
+    }
+    
     if (!safari.pricing || safari.pricing.length === 0) return "Contact for price"
     
     let minPrice = Infinity

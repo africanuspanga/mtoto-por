@@ -26,6 +26,7 @@ export interface SafariPackage {
   included: string[]
   excluded: string[]
   wildlife: string[]
+  displayPrice?: string
 }
 
 export const safariPackages: SafariPackage[] = [
@@ -83,6 +84,7 @@ export const safariPackages: SafariPackage[] = [
     ],
     excluded: ["Alcoholic beverages", "Tips for driver/guide", "Personal expenses"],
     wildlife: ["Crocodiles", "Hippos", "Lions", "Elephants", "Giraffes", "Buffalos", "Zebras", "Antelopes"],
+    displayPrice: "$500",
   },
   {
     id: "1-day-mikumi",
@@ -138,6 +140,7 @@ export const safariPackages: SafariPackage[] = [
     ],
     excluded: ["Alcoholic beverages", "Tips for driver/guide", "Personal expenses"],
     wildlife: ["Crocodiles", "Hippos", "Lions", "Elephants", "Giraffes", "Buffalos", "Zebras", "Antelopes"],
+    displayPrice: "$500",
   },
   {
     id: "2-days-selous",
@@ -210,6 +213,7 @@ export const safariPackages: SafariPackage[] = [
     ],
     excluded: ["Alcoholic beverages", "Laundry services", "Tips for driver/guide", "Personal expenses"],
     wildlife: ["Crocodiles", "Hippos", "Lions", "Elephants", "Giraffes", "Various bird species"],
+    displayPrice: "$800",
   },
   {
     id: "2-days-mikumi",
