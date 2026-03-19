@@ -632,7 +632,7 @@ export const safariPackages: SafariPackage[] = [
       {
         type: "Standard Package",
         prices: [
-          { groupSize: "Per Person", price: "$800" },
+          { groupSize: "Per Person", price: "$1200" },
         ],
       },
     ],
